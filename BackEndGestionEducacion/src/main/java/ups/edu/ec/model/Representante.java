@@ -10,7 +10,7 @@ public class Representante {
     private String Direccion;
 
     public Representante(){
-        
+
     }
 
     public Representante(int id, String nombre, String apellido, String cedula, String profesion, String telefono, String direccion) {
