@@ -1,6 +1,15 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
+
 public class Representante {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private String apellido;
@@ -8,6 +17,8 @@ public class Representante {
     private String profesion;
     private String telefono;
     private String Direccion;
+    @OneToMany(mappedBy = "representante")
+    private List<Alumno> alumnos;
 
     public Representante(){
 

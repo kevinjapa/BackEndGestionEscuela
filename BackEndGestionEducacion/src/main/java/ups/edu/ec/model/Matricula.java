@@ -1,6 +1,10 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.*;
+
 public class Matricula {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int id_alumno;
     private String nombre;
@@ -20,6 +24,10 @@ public class Matricula {
         this.id_anio_lectivo = id_anio_lectivo;
         this.matricula = matricula;
     }
+
+    @ManyToOne
+    @JoinColumn(name = "alumno_id")
+    private Alumno alumno;
 
     public int getId() {
         return id;

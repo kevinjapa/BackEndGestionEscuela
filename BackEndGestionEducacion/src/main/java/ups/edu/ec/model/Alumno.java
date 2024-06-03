@@ -1,8 +1,13 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
+import java.util.List;
 
 public class Alumno {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private String apellido;
@@ -12,6 +17,21 @@ public class Alumno {
     private String sexo;
     private Date fecha_N;
     private String direccion;
+
+    @OneToMany(mappedBy = "alumno")
+    private List<Matricula> matriculas;
+
+    @ManyToOne
+    @JoinColumn(name = "representante_id")
+    private Representante representante;
+
+    @ManyToMany
+    @JoinTable(
+            name = "curso_alumno",
+            joinColumns = @JoinColumn(name = "alumno_id"),
+            inverseJoinColumns = @JoinColumn(name = "curso_id")
+    )
+    private List<Curso> cursos;
 
     public Alumno(String nombre, String apellido, String cedula, String telefono, String email, String sexo, Date fecha_N, String direccion) {
         this.nombre = nombre;
@@ -23,6 +43,7 @@ public class Alumno {
         this.fecha_N = fecha_N;
         this.direccion = direccion;
     }
+
 
     public String getNombre() {
         return nombre;

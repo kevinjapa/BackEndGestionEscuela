@@ -1,6 +1,10 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.*;
+
 public class Detalle_Factura {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int id_cabeceraFactura;
     private int id_matricula;
@@ -9,6 +13,10 @@ public class Detalle_Factura {
     private double total;
     private String detalle;
     private double iva;
+
+    @ManyToOne
+    @JoinColumn(name = "cabecera_factura_id")
+    private Cabecera_Factura cabeceraFactura;
 
     public Detalle_Factura(){
 

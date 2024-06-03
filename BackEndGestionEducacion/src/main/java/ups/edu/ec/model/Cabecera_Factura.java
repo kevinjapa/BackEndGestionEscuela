@@ -1,8 +1,13 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
+import java.util.List;
 
 public class Cabecera_Factura {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int codigo_Factura;
     private int id_representante;
@@ -12,6 +17,13 @@ public class Cabecera_Factura {
     private String telefono;
     private Date fechaEmision;
     private int id_anioLectivo;
+
+    @OneToMany(mappedBy = "cabeceraFactura")
+    private List<Detalle_Factura> detalles;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
     public Cabecera_Factura(){
 

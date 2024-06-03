@@ -1,22 +1,35 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.*;
+
+import java.util.List;
+
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int rol;
     private String usuario;
     private String password;
     private String estado;
+
+    @ManyToOne
+    @JoinColumn(name = "rol_id")
+    private Rol rol;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Cabecera_Factura> facturas;
 
     public Usuario(){
 
     }
 
-    public Usuario(int id, int rol, String usuario, String password, String estado) {
+    public Usuario(int id, String usuario, String password, String estado, Rol rol, List<Cabecera_Factura> facturas) {
         this.id = id;
-        this.rol = rol;
         this.usuario = usuario;
         this.password = password;
         this.estado = estado;
+        this.rol = rol;
+        this.facturas = facturas;
     }
 
     public int getId() {
@@ -25,14 +38,6 @@ public class Usuario {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getRol() {
-        return rol;
-    }
-
-    public void setRol(int rol) {
-        this.rol = rol;
     }
 
     public String getUsuario() {

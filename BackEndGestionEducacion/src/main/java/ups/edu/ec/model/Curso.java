@@ -1,10 +1,27 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.*;
+
+import java.util.List;
+
 public class Curso {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int id_docente;
     private String descripcion;
+
+    @ManyToOne
+    @JoinColumn(name = "docente_id")
+    private Docente docente;
+
+    @ManyToOne
+    @JoinColumn(name = "anio_lectivo_id")
+    private Anio_Lectivo anioLectivo;
+
+    @ManyToMany(mappedBy = "cursos")
+    private List<Alumno> alumnos;
 
     public Curso(){
 

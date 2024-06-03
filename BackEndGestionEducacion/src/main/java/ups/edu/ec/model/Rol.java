@@ -1,9 +1,21 @@
 package ups.edu.ec.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
+
 public class Rol {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String descripcion;
+
+    @OneToMany(mappedBy = "rol")
+    private List<Usuario> usuarios;
 
     public  Rol(){
 
