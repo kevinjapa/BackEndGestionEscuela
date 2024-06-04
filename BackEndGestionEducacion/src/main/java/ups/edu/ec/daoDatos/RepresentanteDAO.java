@@ -1,4 +1,4 @@
-package ups.edu.ec.DaoDatos;
+package ups.edu.ec.daoDatos;
 
 
 import jakarta.ejb.Stateless;

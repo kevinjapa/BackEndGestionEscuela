@@ -1,4 +1,4 @@
-package ups.edu.ec.DaoDatos;
+package ups.edu.ec.daoDatos;
 
 import ups.edu.ec.model.Cabecera_Factura;
 

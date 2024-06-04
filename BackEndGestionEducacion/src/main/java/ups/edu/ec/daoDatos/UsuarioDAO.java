@@ -1,6 +1,5 @@
-package ups.edu.ec.DaoDatos;
+package ups.edu.ec.daoDatos;
 
-import jakarta.ejb.Stateful;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
