@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 import java.util.List;
-
+@Entity
 public class Cabecera_Factura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

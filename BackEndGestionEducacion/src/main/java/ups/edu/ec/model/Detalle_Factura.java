@@ -2,6 +2,7 @@ package ups.edu.ec.model;
 
 import jakarta.persistence.*;
 
+@Entity
 public class Detalle_Factura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

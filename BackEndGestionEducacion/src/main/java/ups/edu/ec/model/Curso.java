@@ -3,7 +3,7 @@ package ups.edu.ec.model;
 import jakarta.persistence.*;
 
 import java.util.List;
-
+@Entity
 public class Curso {
 
     @Id

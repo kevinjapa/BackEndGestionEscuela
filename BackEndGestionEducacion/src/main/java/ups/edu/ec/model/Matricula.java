@@ -2,6 +2,7 @@ package ups.edu.ec.model;
 
 import jakarta.persistence.*;
 
+@Entity
 public class Matricula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
