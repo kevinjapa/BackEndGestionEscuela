@@ -3,6 +3,7 @@ package ups.edu.ec.daoDatos;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import ups.edu.ec.model.Cabecera_Factura;
 import ups.edu.ec.model.Curso;
 
 import java.io.Serializable;
@@ -26,8 +27,11 @@ public class CursoDAO implements Serializable {
         em.merge(curso);
     }
 
-    public void delete(Curso curso) {
-        em.remove(em.merge(curso));
+    public void delete(int id) {
+            Curso curso = em.find(Curso.class, id);
+        if (curso != null) {
+            em.remove(curso);
+        }
     }
 
     public List<Curso> findAll() {
