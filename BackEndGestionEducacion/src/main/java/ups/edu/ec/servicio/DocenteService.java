@@ -1,34 +1,26 @@
 package ups.edu.ec.servicio;
 
-
 import jakarta.inject.Inject;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.DELETE;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
-import ups.edu.ec.model.Alumno;
-import ups.edu.ec.negocio.GestionAlumno;
+import ups.edu.ec.model.Docente;
+import ups.edu.ec.negocio.GestionDocente;
 import ups.edu.ec.utlils.Codigos;
 import ups.edu.ec.utlils.Mensajes;
 
 import java.util.List;
-@Path("Alumno")
-public class AlumnoService {
+
+public class DocenteService {
 
     @Inject
-    private GestionAlumno gestionAlumno;
+    private GestionDocente gestionDocente;
 
     @GET
     @Path("List")
     @Produces("application/json")
-    public List<Alumno> getAll() throws Exception {
+    public List<Docente> getAll() throws Exception {
         try {
-            return this.gestionAlumno.getAll();
+            return this.gestionDocente.getAll();
         } catch (Exception e) {
             System.out.println("Error en servicio GET: " + e.getMessage());
             var error = new Error();
@@ -41,9 +33,9 @@ public class AlumnoService {
     @GET
     @Path("buscar/{id}")
     @Produces("application/json")
-    public Alumno getById(@PathParam("id") int id) throws Exception {
+    public Docente getById(@PathParam("id") int id) throws Exception {
         try {
-            return this.gestionAlumno.findById(id);
+            return this.gestionDocente.findById(id);
         } catch (Exception e) {
             System.out.println("Error en servicio GET: objeto no encontrado " + e.getMessage());
             var error = new Error();
@@ -57,11 +49,11 @@ public class AlumnoService {
     @Path("guardar")
     @Produces("application/json")
     @Consumes("application/json")
-    public Response save(Alumno alumno) {
-        System.out.println("Servicio POST: " + alumno.toString());
+    public Response save(Docente docente) {
+        System.out.println("Servicio POST: " + docente.toString());
         try {
-            this.gestionAlumno.save(alumno);
-            return Response.status(Response.Status.OK).entity(alumno).build();
+            this.gestionDocente.save(docente);
+            return Response.status(Response.Status.OK).entity(docente).build();
         } catch (Exception e) {
             System.out.println("Error en servicio POST: " + e.getMessage());
             var error = new Error();
@@ -75,18 +67,18 @@ public class AlumnoService {
     @Path("actualizar")
     @Produces("application/json")
     @Consumes("application/json")
-    public Response update(Alumno alumno) {
-        System.out.println("Servicio PUT: " + alumno.toString());
+    public Response update(Docente docente) {
+        System.out.println("Servicio PUT: " + docente.toString());
         try {
-            Alumno alumnoToEdit = this.gestionAlumno.findById(alumno.getId());
-            if (alumnoToEdit == null) {
+            Docente docenteToEdit = this.gestionDocente.findById(docente.getId());
+            if (docenteToEdit == null) {
                 var error = new Error();
                 error.setCodigo(Codigos.ERROR_NOT_FOUND_CODE);
                 error.setMensaje(Mensajes.ERROR_NOT_FOUND_MESSAGE);
                 return Response.status(Response.Status.NOT_FOUND).entity(error).build();
             }
-            this.gestionAlumno.update(alumno);
-            return Response.status(Response.Status.OK).entity(alumno).build();
+            this.gestionDocente.update(docente);
+            return Response.status(Response.Status.OK).entity(docente).build();
         } catch (Exception e) {
             System.out.println("Error en servicio PUT: " + e.getMessage());
             var error = new Error();
@@ -100,7 +92,7 @@ public class AlumnoService {
     @Path("eliminar/{id}")
     public Response delete(@PathParam("id") int id) {
         try {
-            this.gestionAlumno.delete(id);
+            this.gestionDocente.delete(id);
             return Response.status(Response.Status.OK).build();
         } catch (Exception e) {
             System.out.println("Error en servicio DELETE: " + e.getMessage());
