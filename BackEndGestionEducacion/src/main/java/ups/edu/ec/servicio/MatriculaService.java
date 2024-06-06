@@ -9,13 +9,13 @@ import ups.edu.ec.utlils.Codigos;
 import ups.edu.ec.utlils.Mensajes;
 
 import java.util.List;
-
+@Path("/Matricila")
 public class MatriculaService {
     @Inject
     private GestionMatricula gestionMatricula;
 
     @GET
-    @Path("List")
+    @Path("/List")
     @Produces("application/json")
     public List<Matricula> getAll() throws Exception {
         try {
@@ -30,7 +30,7 @@ public class MatriculaService {
     }
 
     @GET
-    @Path("buscar/{id}")
+    @Path("/buscar/{id}")
     @Produces("application/json")
     public Matricula getById(@PathParam("id") int id) throws Exception {
         try {
@@ -45,7 +45,7 @@ public class MatriculaService {
     }
 
     @POST
-    @Path("guardar")
+    @Path("/guardar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response save(Matricula matricula) {
@@ -63,7 +63,7 @@ public class MatriculaService {
     }
 
     @PUT
-    @Path("actualizar")
+    @Path("/actualizar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response update(Matricula matricula) {
@@ -88,7 +88,7 @@ public class MatriculaService {
     }
 
     @DELETE
-    @Path("eliminar/{id}")
+    @Path("/eliminar/{id}")
     public Response delete(@PathParam("id") int id) {
         try {
             this.gestionMatricula.delete(id);

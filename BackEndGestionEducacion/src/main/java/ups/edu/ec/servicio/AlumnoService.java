@@ -17,14 +17,14 @@ import ups.edu.ec.utlils.Codigos;
 import ups.edu.ec.utlils.Mensajes;
 
 import java.util.List;
-@Path("Alumno")
+@Path("/Alumno")
 public class AlumnoService {
 
     @Inject
     private GestionAlumno gestionAlumno;
 
     @GET
-    @Path("List")
+    @Path("/List")
     @Produces("application/json")
     public List<Alumno> getAll() throws Exception {
         try {
@@ -39,7 +39,7 @@ public class AlumnoService {
     }
 
     @GET
-    @Path("buscar/{id}")
+    @Path("/buscar/{id}")
     @Produces("application/json")
     public Alumno getById(@PathParam("id") int id) throws Exception {
         try {
@@ -54,7 +54,7 @@ public class AlumnoService {
     }
 
     @POST
-    @Path("guardar")
+    @Path("/guardar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response save(Alumno alumno) {
@@ -72,7 +72,7 @@ public class AlumnoService {
     }
 
     @PUT
-    @Path("actualizar")
+    @Path("/actualizar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response update(Alumno alumno) {
@@ -97,7 +97,7 @@ public class AlumnoService {
     }
 
     @DELETE
-    @Path("eliminar/{id}")
+    @Path("/eliminar/{id}")
     public Response delete(@PathParam("id") int id) {
         try {
             this.gestionAlumno.delete(id);

@@ -11,14 +11,14 @@ import ups.edu.ec.utlils.Mensajes;
 
 import java.util.List;
 
-@Path("AnioLectivo")
+@Path("/AnioLectivo")
 public class Anio_LectivoService {
 
     @Inject
     private GestionAnio_lectivo gestionAniolectivo;
 
     @GET
-    @Path("List")
+    @Path("/List")
     @Produces("application/json")
     public List<Anio_Lectivo> getAll() throws Exception {
         try {
@@ -32,7 +32,7 @@ public class Anio_LectivoService {
         }
     }
     @GET
-    @Path("buscar/{id}")
+    @Path("/buscar/{id}")
     @Produces("application/json")
     public Anio_Lectivo getById(@PathParam("id") int id) throws Exception {
         try {
@@ -46,7 +46,7 @@ public class Anio_LectivoService {
         }
     }
     @POST
-    @Path("guardar")
+    @Path("/guardar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response save(Anio_Lectivo anio_lectivo) {
@@ -63,7 +63,7 @@ public class Anio_LectivoService {
         }
     }
     @PUT
-    @Path("actualizar")
+    @Path("/actualizar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response update(Anio_Lectivo anio_lectivo) {
@@ -87,7 +87,7 @@ public class Anio_LectivoService {
         }
     }
     @DELETE
-    @Path("eliminar/{id}")
+    @Path("/eliminar/{id}")
     public Response delete(@PathParam("id") int id) {
         try {
             this.gestionAniolectivo.delete(id);

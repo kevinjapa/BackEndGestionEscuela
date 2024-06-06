@@ -10,12 +10,13 @@ import ups.edu.ec.utlils.Mensajes;
 
 import java.util.List;
 
+@Path("/Curso")
 public class CursoService {
     @Inject
     private GestionCurso gestionCurso;
 
     @GET
-    @Path("List")
+    @Path("/List")
     @Produces("application/json")
     public List<Curso> getAll() throws Exception {
         try {
@@ -30,7 +31,7 @@ public class CursoService {
     }
 
     @GET
-    @Path("buscar/{id}")
+    @Path("/buscar/{id}")
     @Produces("application/json")
     public Curso getById(@PathParam("id") int id) throws Exception {
         try {
@@ -45,7 +46,7 @@ public class CursoService {
     }
 
     @POST
-    @Path("guardar")
+    @Path("/guardar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response save(Curso curso) {
@@ -63,7 +64,7 @@ public class CursoService {
     }
 
     @PUT
-    @Path("actualizar")
+    @Path("/actualizar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response update(Curso curso) {
@@ -88,7 +89,7 @@ public class CursoService {
     }
 
     @DELETE
-    @Path("eliminar/{id}")
+    @Path("/eliminar/{id}")
     public Response delete(@PathParam("id") int id) {
         try {
             this.gestionCurso.delete(id);
