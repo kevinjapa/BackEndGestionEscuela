@@ -16,6 +16,7 @@ ups\edu\ec\servicio\Detalle_FacturaService.class
 ups\edu\ec\daoDatos\RepresentanteDAO.class
 ups\edu\ec\negocio\GestionMatricula.class
 ups\edu\ec\model\Representante_.class
+ups\edu\ec\servicio\PathBase.class
 ups\edu\ec\model\Alumno.class
 ups\edu\ec\model\Matricula.class
 ups\edu\ec\utlils\Codigos.class
