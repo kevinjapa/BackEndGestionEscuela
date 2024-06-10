@@ -1,5 +1,6 @@
 package ups.edu.ec.negocio;
 
+import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import ups.edu.ec.daoDatos.RolDAO;
 import ups.edu.ec.model.Anio_Lectivo;
@@ -7,6 +8,7 @@ import ups.edu.ec.model.Rol;
 
 import java.util.List;
 
+@Stateless
 public class GestionRol {
     @Inject
     private RolDAO rolDAO;

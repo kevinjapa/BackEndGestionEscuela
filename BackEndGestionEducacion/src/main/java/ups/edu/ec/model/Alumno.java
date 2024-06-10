@@ -44,6 +44,9 @@ public class Alumno {
         this.fecha_N = fecha_N;
         this.direccion = direccion;
     }
+    public Alumno(){
+
+    }
 
     public int getId() {
         return id;

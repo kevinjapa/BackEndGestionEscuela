@@ -33,7 +33,6 @@ public class CursoDAO implements Serializable {
             em.remove(curso);
         }
     }
-
     public List<Curso> findAll() {
         return em.createQuery("SELECT c FROM Curso c", Curso.class).getResultList();
     }

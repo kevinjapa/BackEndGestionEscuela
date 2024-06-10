@@ -1,0 +1,326 @@
+2024-06-09 20:43:28,575 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.2.Final
+2024-06-09 20:43:28,833 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.2.Final
+2024-06-09 20:43:28,837 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2024-06-09 20:43:28,886 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0049: WildFly Full 30.0.0.Final (WildFly Core 22.0.1.Final) starting
+2024-06-09 20:43:28,887 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+	[Standalone] = 
+	apple.awt.application.name = Main
+	file.encoding = UTF-8
+	file.separator = /
+	ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+	http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+	java.awt.headless = true
+	java.class.path = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/jboss-modules.jar
+	java.class.version = 63.0
+	java.home = /Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home
+	java.io.tmpdir = /var/folders/3z/x0r1p0bd2f7b2ysdskjmx4yc0000gn/T/
+	java.library.path = /opt/homebrew/Cellar/ffmpeg@6/6.1.1/lib/::/Users/kevinjapa/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 19.0.1+10-21
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 19
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = https://java.oracle.com/
+	java.vendor.url.bug = https://bugreport.java.com/bugreport/
+	java.version = 19.0.1
+	java.version.date = 2022-10-18
+	java.vm.compressedOopsMode = Zero based
+	java.vm.info = mixed mode, sharing
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 19
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 19.0.1+10-21
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final
+	jboss.host.name = macbook-pro-de-kevin
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = macbook-pro-de-kevin
+	jboss.qualified.host.name = macbook-pro-de-kevin.local
+	jboss.server.base.dir = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone
+	jboss.server.config.dir = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/configuration
+	jboss.server.data.dir = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/data
+	jboss.server.log.dir = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/log
+	jboss.server.name = macbook-pro-de-kevin
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/configuration/logging.properties
+	module.path = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/modules
+	native.encoding = US-ASCII
+	org.jboss.boot.log.file = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = aarch64
+	os.name = Mac OS X
+	os.version = 14.5
+	path.separator = :
+	socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+	stderr.encoding = US-ASCII
+	stdout.encoding = US-ASCII
+	sun.arch.data.model = 64
+	sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home/lib
+	sun.cpu.endian = little
+	sun.io.unicode.encoding = UnicodeBig
+	sun.java.command = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/jboss-modules.jar -mp /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/modules org.jboss.as.standalone -Djboss.home.dir=/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final -Djboss.server.base.dir=/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone -Djboss.server.log.dir=/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/log -Djboss.server.config.dir=/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/configuration
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	user.country = 419
+	user.dir = /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion
+	user.home = /Users/kevinjapa
+	user.language = es
+	user.name = kevinjapa
+	user.timezone = America/Guayaquil
+2024-06-09 20:43:28,888 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -Djboss.modules.system.pkgs=org.jboss.byteman --add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-exports=jdk.unsupported/sun.reflect=ALL-UNNAMED --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED --add-modules=java.se -Dorg.jboss.boot.log.file=/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/log/server.log -Dlogging.configuration=file:/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/configuration/logging.properties 
+2024-06-09 20:43:29,161 INFO  [org.wildfly.security] (ServerService Thread Pool -- 26) ELY00001: WildFly Elytron version 2.2.2.Final
+2024-06-09 20:43:29,366 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 25) WFLYCTL0028: Attribute 'cluster' in the resource at address '/subsystem=ejb3/service=remote' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2024-06-09 20:43:29,391 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2024-06-09 20:43:29,396 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.8.11.Final
+2024-06-09 20:43:29,399 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.8.11.Final
+2024-06-09 20:43:29,411 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 53) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2024-06-09 20:43:29,415 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 55) WFLYCLINF0001: Activating Infinispan subsystem.
+2024-06-09 20:43:29,417 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 56) WFLYIO001: Worker 'default' has auto-configured to 16 IO threads with 128 max task threads based on your 8 available processors
+2024-06-09 20:43:29,417 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 54) WFLYHEALTH0001: Activating Base Health Subsystem
+2024-06-09 20:43:29,417 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 57) WFLYRS0016: RESTEasy version 6.2.5.Final
+2024-06-09 20:43:29,419 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 65) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2024-06-09 20:43:29,420 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 66) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2024-06-09 20:43:29,422 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2024-06-09 20:43:29,442 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2024-06-09 20:43:29,445 INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.4.Final)
+2024-06-09 20:43:29,450 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 62) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2024-06-09 20:43:29,452 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2024-06-09 20:43:29,457 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 64) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2024-06-09 20:43:29,467 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2024-06-09 20:43:29,467 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2024-06-09 20:43:29,469 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 2.2)
+2024-06-09 20:43:29,479 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0018: Started Driver service with driver-name = h2
+2024-06-09 20:43:29,505 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY00023: KeyStore file '/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/configuration/application.keystore' does not exist. Used blank.
+2024-06-09 20:43:29,520 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0003: Undertow 2.3.10.Final starting
+2024-06-09 20:43:29,524 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-6) WFLYELY01084: KeyStore /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+2024-06-09 20:43:29,533 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 5.0.27.Final
+2024-06-09 20:43:29,541 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2024-06-09 20:43:29,544 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2024-06-09 20:43:29,544 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2024-06-09 20:43:29,545 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0012: Started server default-server.
+2024-06-09 20:43:29,546 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) Queuing requests.
+2024-06-09 20:43:29,546 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0018: Host default-host starting
+2024-06-09 20:43:29,567 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2024-06-09 20:43:29,632 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2024-06-09 20:43:29,636 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2024-06-09 20:43:29,678 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2024-06-09 20:43:29,763 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/deployments
+2024-06-09 20:43:29,799 INFO  [org.jboss.ws.common.management] (MSC service thread 1-7) JBWS022052: Starting JBossWS 7.0.0.Final (Apache CXF 4.0.0) 
+2024-06-09 20:43:29,852 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2024-06-09 20:43:29,854 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2024-06-09 20:43:29,855 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2024-06-09 20:43:29,855 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 30.0.0.Final (WildFly Core 22.0.1.Final) started in 1482ms - Started 280 of 522 services (317 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2024-06-09 20:43:29,975 INFO  [org.jboss.as.repository] (management-handler-thread - 1) WFLYDR0001: Content added at location /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/wildfly-30.0.0.Final/standalone/data/content/02/13c328483beef2a27a1cb1b567fb5369be86e2/content
+2024-06-09 20:43:29,987 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "BackEndGestionEducacion-1.0-SNAPSHOT.jar" (runtime-name: "BackEndGestionEducacion-1.0-SNAPSHOT.jar")
+2024-06-09 20:43:30,101 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) WFLYJPA0002: Read persistence.xml for miUnidadDePersistencia
+2024-06-09 20:43:30,132 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 9) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'BackEndGestionEducacion-1.0-SNAPSHOT.jar#miUnidadDePersistencia'
+2024-06-09 20:43:30,141 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 9) HHH000204: Processing PersistenceUnitInfo [name: miUnidadDePersistencia]
+2024-06-09 20:43:30,149 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) WFLYWELD0003: Processing weld deployment BackEndGestionEducacion-1.0-SNAPSHOT.jar
+2024-06-09 20:43:30,177 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 9) HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-06-09 20:43:30,178 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 9) HHH000406: Using bytecode reflection optimizer
+2024-06-09 20:43:30,181 WARN  [org.hibernate.orm.deprecation] (ServerService Thread Pool -- 9) HHH90000021: Encountered deprecated setting [javax.persistence.jdbc.user], use [jakarta.persistence.jdbc.user] instead
+2024-06-09 20:43:30,181 WARN  [org.hibernate.orm.deprecation] (ServerService Thread Pool -- 9) HHH90000021: Encountered deprecated setting [javax.persistence.jdbc.password], use [jakarta.persistence.jdbc.password] instead
+2024-06-09 20:43:30,183 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-7) HV000001: Hibernate Validator 8.0.1.Final
+2024-06-09 20:43:30,244 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionMatricula' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionMatricula!ups.edu.ec.negocio.GestionMatricula
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionMatricula!ups.edu.ec.negocio.GestionMatricula
+	java:module/GestionMatricula!ups.edu.ec.negocio.GestionMatricula
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionMatricula
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionMatricula
+	java:module/GestionMatricula
+
+2024-06-09 20:43:30,244 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionDetalle_Factura' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDetalle_Factura!ups.edu.ec.negocio.GestionDetalle_Factura
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDetalle_Factura!ups.edu.ec.negocio.GestionDetalle_Factura
+	java:module/GestionDetalle_Factura!ups.edu.ec.negocio.GestionDetalle_Factura
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDetalle_Factura
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDetalle_Factura
+	java:module/GestionDetalle_Factura
+
+2024-06-09 20:43:30,244 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'RepresentanteDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/RepresentanteDAO!ups.edu.ec.daoDatos.RepresentanteDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/RepresentanteDAO!ups.edu.ec.daoDatos.RepresentanteDAO
+	java:module/RepresentanteDAO!ups.edu.ec.daoDatos.RepresentanteDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/RepresentanteDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/RepresentanteDAO
+	java:module/RepresentanteDAO
+
+2024-06-09 20:43:30,244 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'ConexionDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/ConexionDAO!ups.edu.ec.daoDatos.ConexionDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/ConexionDAO!ups.edu.ec.daoDatos.ConexionDAO
+	java:module/ConexionDAO!ups.edu.ec.daoDatos.ConexionDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/ConexionDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/ConexionDAO
+	java:module/ConexionDAO
+
+2024-06-09 20:43:30,244 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionAlumno' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAlumno!ups.edu.ec.negocio.GestionAlumno
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAlumno!ups.edu.ec.negocio.GestionAlumno
+	java:module/GestionAlumno!ups.edu.ec.negocio.GestionAlumno
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAlumno
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAlumno
+	java:module/GestionAlumno
+
+2024-06-09 20:43:30,244 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionCabecera_Factura' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCabecera_Factura!ups.edu.ec.negocio.GestionCabecera_Factura
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCabecera_Factura!ups.edu.ec.negocio.GestionCabecera_Factura
+	java:module/GestionCabecera_Factura!ups.edu.ec.negocio.GestionCabecera_Factura
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCabecera_Factura
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCabecera_Factura
+	java:module/GestionCabecera_Factura
+
+2024-06-09 20:43:30,244 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionDocente' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDocente!ups.edu.ec.negocio.GestionDocente
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDocente!ups.edu.ec.negocio.GestionDocente
+	java:module/GestionDocente!ups.edu.ec.negocio.GestionDocente
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDocente
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionDocente
+	java:module/GestionDocente
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'UsuarioDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/UsuarioDAO!ups.edu.ec.daoDatos.UsuarioDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/UsuarioDAO!ups.edu.ec.daoDatos.UsuarioDAO
+	java:module/UsuarioDAO!ups.edu.ec.daoDatos.UsuarioDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/UsuarioDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/UsuarioDAO
+	java:module/UsuarioDAO
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'CursoDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/CursoDAO!ups.edu.ec.daoDatos.CursoDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/CursoDAO!ups.edu.ec.daoDatos.CursoDAO
+	java:module/CursoDAO!ups.edu.ec.daoDatos.CursoDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/CursoDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/CursoDAO
+	java:module/CursoDAO
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestioUsusario' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestioUsusario!ups.edu.ec.negocio.GestioUsusario
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestioUsusario!ups.edu.ec.negocio.GestioUsusario
+	java:module/GestioUsusario!ups.edu.ec.negocio.GestioUsusario
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestioUsusario
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestioUsusario
+	java:module/GestioUsusario
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionRol' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRol!ups.edu.ec.negocio.GestionRol
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRol!ups.edu.ec.negocio.GestionRol
+	java:module/GestionRol!ups.edu.ec.negocio.GestionRol
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRol
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRol
+	java:module/GestionRol
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'Detalle_FacturaDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/Detalle_FacturaDAO!ups.edu.ec.daoDatos.Detalle_FacturaDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/Detalle_FacturaDAO!ups.edu.ec.daoDatos.Detalle_FacturaDAO
+	java:module/Detalle_FacturaDAO!ups.edu.ec.daoDatos.Detalle_FacturaDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/Detalle_FacturaDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/Detalle_FacturaDAO
+	java:module/Detalle_FacturaDAO
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'AlumnoDao' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/AlumnoDao!ups.edu.ec.daoDatos.AlumnoDao
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/AlumnoDao!ups.edu.ec.daoDatos.AlumnoDao
+	java:module/AlumnoDao!ups.edu.ec.daoDatos.AlumnoDao
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/AlumnoDao
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/AlumnoDao
+	java:module/AlumnoDao
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'MatriculaDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/MatriculaDAO!ups.edu.ec.daoDatos.MatriculaDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/MatriculaDAO!ups.edu.ec.daoDatos.MatriculaDAO
+	java:module/MatriculaDAO!ups.edu.ec.daoDatos.MatriculaDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/MatriculaDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/MatriculaDAO
+	java:module/MatriculaDAO
+
+2024-06-09 20:43:30,245 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'RolDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/RolDAO!ups.edu.ec.daoDatos.RolDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/RolDAO!ups.edu.ec.daoDatos.RolDAO
+	java:module/RolDAO!ups.edu.ec.daoDatos.RolDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/RolDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/RolDAO
+	java:module/RolDAO
+
+2024-06-09 20:43:30,246 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionCurso' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCurso!ups.edu.ec.negocio.GestionCurso
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCurso!ups.edu.ec.negocio.GestionCurso
+	java:module/GestionCurso!ups.edu.ec.negocio.GestionCurso
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCurso
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionCurso
+	java:module/GestionCurso
+
+2024-06-09 20:43:30,246 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionRepresentate' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRepresentate!ups.edu.ec.negocio.GestionRepresentate
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRepresentate!ups.edu.ec.negocio.GestionRepresentate
+	java:module/GestionRepresentate!ups.edu.ec.negocio.GestionRepresentate
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRepresentate
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionRepresentate
+	java:module/GestionRepresentate
+
+2024-06-09 20:43:30,246 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'GestionAnio_lectivo' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAnio_lectivo!ups.edu.ec.negocio.GestionAnio_lectivo
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAnio_lectivo!ups.edu.ec.negocio.GestionAnio_lectivo
+	java:module/GestionAnio_lectivo!ups.edu.ec.negocio.GestionAnio_lectivo
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAnio_lectivo
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/GestionAnio_lectivo
+	java:module/GestionAnio_lectivo
+
+2024-06-09 20:43:30,246 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'DocenteDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/DocenteDAO!ups.edu.ec.daoDatos.DocenteDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/DocenteDAO!ups.edu.ec.daoDatos.DocenteDAO
+	java:module/DocenteDAO!ups.edu.ec.daoDatos.DocenteDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/DocenteDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/DocenteDAO
+	java:module/DocenteDAO
+
+2024-06-09 20:43:30,246 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'Anio_LectivoDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/Anio_LectivoDAO!ups.edu.ec.daoDatos.Anio_LectivoDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/Anio_LectivoDAO!ups.edu.ec.daoDatos.Anio_LectivoDAO
+	java:module/Anio_LectivoDAO!ups.edu.ec.daoDatos.Anio_LectivoDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/Anio_LectivoDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/Anio_LectivoDAO
+	java:module/Anio_LectivoDAO
+
+2024-06-09 20:43:30,246 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'Cabecera_FacturaDAO' in deployment unit 'deployment "BackEndGestionEducacion-1.0-SNAPSHOT.jar"' are as follows:
+
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/Cabecera_FacturaDAO!ups.edu.ec.daoDatos.Cabecera_FacturaDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/Cabecera_FacturaDAO!ups.edu.ec.daoDatos.Cabecera_FacturaDAO
+	java:module/Cabecera_FacturaDAO!ups.edu.ec.daoDatos.Cabecera_FacturaDAO
+	java:global/BackEndGestionEducacion-1.0-SNAPSHOT/Cabecera_FacturaDAO
+	java:app/BackEndGestionEducacion-1.0-SNAPSHOT/Cabecera_FacturaDAO
+	java:module/Cabecera_FacturaDAO
+
+2024-06-09 20:43:30,391 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 9) Envers integration enabled? : true
+2024-06-09 20:43:30,400 INFO  [org.jboss.weld.Version] (MSC service thread 1-8) WELD-000900: 5.1.2 (Final)
+2024-06-09 20:43:30,496 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 9) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'BackEndGestionEducacion-1.0-SNAPSHOT.jar#miUnidadDePersistencia'
+2024-06-09 20:43:31,328 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "BackEndGestionEducacion-1.0-SNAPSHOT.jar" (runtime-name : "BackEndGestionEducacion-1.0-SNAPSHOT.jar")

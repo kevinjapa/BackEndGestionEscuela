@@ -53,11 +53,11 @@
             <artifactId>postgresql</artifactId>
             <version>42.2.5</version>
         </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
-            <!-- WildFly Maven Plugin -->
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
@@ -65,8 +65,8 @@
                 <configuration>
                     <hostname>localhost</hostname>
                     <port>9990</port>
-                    <username>your-username</username>
-                    <password>your-password</password>
+                    <username>admin</username>
+                    <password>admin</password>
                 </configuration>
             </plugin>
 

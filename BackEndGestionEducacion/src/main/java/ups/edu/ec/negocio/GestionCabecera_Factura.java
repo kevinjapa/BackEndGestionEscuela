@@ -1,5 +1,7 @@
 package ups.edu.ec.negocio;
 
+import jakarta.ejb.Stateless;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import ups.edu.ec.daoDatos.Cabecera_FacturaDAO;
 import ups.edu.ec.model.Anio_Lectivo;
@@ -7,6 +9,8 @@ import ups.edu.ec.model.Cabecera_Factura;
 
 import java.util.List;
 
+
+@Stateless
 public class GestionCabecera_Factura {
     @Inject
     private Cabecera_FacturaDAO cabecera_facturaDAO;

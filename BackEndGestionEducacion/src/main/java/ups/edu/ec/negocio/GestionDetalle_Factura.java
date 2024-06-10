@@ -1,11 +1,13 @@
 package ups.edu.ec.negocio;
 
+import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import ups.edu.ec.daoDatos.Detalle_FacturaDAO;
 import ups.edu.ec.model.Detalle_Factura;
 
 import java.util.List;
 
+@Stateless
 public class GestionDetalle_Factura {
     @Inject
     private Detalle_FacturaDAO detalle_facturaDAO;

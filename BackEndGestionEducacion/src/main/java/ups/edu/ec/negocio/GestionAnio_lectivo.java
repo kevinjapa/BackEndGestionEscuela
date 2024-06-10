@@ -1,5 +1,6 @@
 package ups.edu.ec.negocio;
 
+import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import ups.edu.ec.daoDatos.AlumnoDao;
 import ups.edu.ec.daoDatos.Anio_LectivoDAO;
@@ -8,6 +9,7 @@ import ups.edu.ec.model.Anio_Lectivo;
 
 import java.util.List;
 
+@Stateless
 public class GestionAnio_lectivo {
     @Inject
     private Anio_LectivoDAO anioLectivoDAO;
