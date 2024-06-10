@@ -13,8 +13,7 @@
         <class>ups.edu.ec.model.Representante</class>
         <class>ups.edu.ec.model.Rol</class>
         <class>ups.edu.ec.model.Usuario</class>
-        <class>ups.edu.ec.daoDatos.Detalle_FacturaDAO</class>
-        <!-- Agrega aquí todas las demás clases de entidad -->
+
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
             <property name="javax.persistence.jdbc.user" value="postgres"/>
@@ -26,5 +25,4 @@
         </properties>
     </persistence-unit>
 </persistence>
-
 
