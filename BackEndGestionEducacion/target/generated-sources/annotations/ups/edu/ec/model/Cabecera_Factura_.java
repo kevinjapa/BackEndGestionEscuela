@@ -3,7 +3,7 @@ package ups.edu.ec.model;
 import jakarta.persistence.metamodel.ListAttribute;
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.annotation.processing.Generated;
 
 @Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
@@ -15,7 +15,7 @@ public abstract class Cabecera_Factura_ {
 	public static volatile SingularAttribute<Cabecera_Factura, Integer> id_representante;
 	public static volatile SingularAttribute<Cabecera_Factura, String> direccion;
 	public static volatile SingularAttribute<Cabecera_Factura, Integer> id_anioLectivo;
-	public static volatile SingularAttribute<Cabecera_Factura, Date> fechaEmision;
+	public static volatile SingularAttribute<Cabecera_Factura, LocalDate> fechaEmision;
 	public static volatile ListAttribute<Cabecera_Factura, Detalle_Factura> detalles;
 	public static volatile SingularAttribute<Cabecera_Factura, Usuario> usuario;
 	public static volatile SingularAttribute<Cabecera_Factura, Integer> id;

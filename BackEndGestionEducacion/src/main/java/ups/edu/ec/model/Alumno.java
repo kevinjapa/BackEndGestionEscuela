@@ -1,7 +1,9 @@
 package ups.edu.ec.model;
 
+import jakarta.json.bind.annotation.JsonbDateFormat;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -16,7 +18,10 @@ public class Alumno {
     private String telefono;
     private String email;
     private String sexo;
-    private Date fecha_N;
+
+    @JsonbDateFormat("yyyy-MM-dd")
+    private LocalDate fecha_N;
+
     private String direccion;
 
     @OneToMany(mappedBy = "alumno")
@@ -34,7 +39,7 @@ public class Alumno {
     )
     private List<Curso> cursos;
 
-    public Alumno(String nombre, String apellido, String cedula, String telefono, String email, String sexo, Date fecha_N, String direccion) {
+    public Alumno(String nombre, String apellido, String cedula, String telefono, String email, String sexo, LocalDate fecha_N, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -104,11 +109,11 @@ public class Alumno {
         this.sexo = sexo;
     }
 
-    public Date getFecha_N() {
+    public LocalDate getFecha_N() {
         return fecha_N;
     }
 
-    public void setFecha_N(Date fecha_N) {
+    public void setFecha_N(LocalDate fecha_N) {
         this.fecha_N = fecha_N;
     }
 

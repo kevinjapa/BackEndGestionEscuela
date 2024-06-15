@@ -3,7 +3,7 @@ package ups.edu.ec.model;
 import jakarta.persistence.metamodel.ListAttribute;
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.annotation.processing.Generated;
 
 @Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
@@ -11,7 +11,7 @@ import javax.annotation.processing.Generated;
 public abstract class Alumno_ {
 
 	public static volatile ListAttribute<Alumno, Curso> cursos;
-	public static volatile SingularAttribute<Alumno, Date> fecha_N;
+	public static volatile SingularAttribute<Alumno, LocalDate> fecha_N;
 	public static volatile SingularAttribute<Alumno, Representante> representante;
 	public static volatile SingularAttribute<Alumno, String> cedula;
 	public static volatile SingularAttribute<Alumno, String> apellido;
