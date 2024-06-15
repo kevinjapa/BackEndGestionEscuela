@@ -30,8 +30,11 @@ public class Docente {
     private String especialidad;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "curso_id")
+    @JoinColumn(name = "curso_id", nullable = true)
     private Curso curso;
+
+    @Transient
+    private Integer cursoId;
 
     public Docente() {
     }
@@ -109,6 +112,19 @@ public class Docente {
 
     public void setCurso(Curso curso) {
         this.curso = curso;
+    }
+
+    public Integer getCursoId() {
+        return cursoId;
+    }
+
+    public void setCursoId(Integer cursoId) {
+        this.cursoId = cursoId;
+        if (cursoId != null) {
+            Curso curso = new Curso();
+            curso.setId(cursoId);
+            setCurso(curso);
+        }
     }
 
     @Override

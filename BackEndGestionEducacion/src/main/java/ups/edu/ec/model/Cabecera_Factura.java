@@ -18,7 +18,7 @@ public class Cabecera_Factura {
     private Double totalMatricula;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "alumno_id", nullable = false)
+    @JoinColumn(name = "alumno_id", nullable = true)
     private Alumno alumno;
 
     @OneToMany(mappedBy = "cabeceraFactura", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -27,12 +27,16 @@ public class Cabecera_Factura {
     @Transient
     private Representante representante;
 
+    @Transient
+    private Integer alumnoId;
+
     @PostLoad
     @PostPersist
     @PostUpdate
     private void loadRepresentante() {
         if (this.alumno != null) {
             this.representante = this.alumno.getRepresentante();
+            this.alumnoId = this.alumno.getId();
         }
     }
 
@@ -137,6 +141,19 @@ public class Cabecera_Factura {
         return representante;
     }
 
+    public Integer getAlumnoId() {
+        return alumnoId;
+    }
+
+    public void setAlumnoId(Integer alumnoId) {
+        this.alumnoId = alumnoId;
+        if (alumnoId != null) {
+            Alumno alumno = new Alumno();
+            alumno.setId(alumnoId);
+            setAlumno(alumno);
+        }
+    }
+
     @Override
     public String toString() {
         return "Cabecera_Factura{" +
@@ -151,6 +168,7 @@ public class Cabecera_Factura {
                 ", totalMatricula=" + totalMatricula +
                 ", detalles=" + detalles +
                 ", representante=" + representante +
+                ", alumnoId=" + alumnoId +
                 '}';
     }
 }

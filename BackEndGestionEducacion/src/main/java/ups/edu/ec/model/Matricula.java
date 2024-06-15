@@ -13,19 +13,28 @@ public class Matricula {
     private String nombre;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "curso_id", nullable = false)
+    @JoinColumn(name = "curso_id", nullable = true)
     private Curso curso;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "anio_lectivo_id", nullable = false)
+    @JoinColumn(name = "anio_lectivo_id", nullable = true)
     private Anio_Lectivo anioLectivo;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "alumno_id", nullable = false)
+    @JoinColumn(name = "alumno_id", nullable = true)
     private Alumno alumno;
 
     @Column(nullable = false)
     private Double matricula;
+
+    @Transient
+    private Integer cursoId;
+
+    @Transient
+    private Integer anioLectivoId;
+
+    @Transient
+    private Integer alumnoId;
 
     public Matricula() {
     }
@@ -85,6 +94,45 @@ public class Matricula {
 
     public void setMatricula(Double matricula) {
         this.matricula = matricula;
+    }
+
+    public Integer getCursoId() {
+        return cursoId;
+    }
+
+    public void setCursoId(Integer cursoId) {
+        this.cursoId = cursoId;
+        if (cursoId != null) {
+            Curso curso = new Curso();
+            curso.setId(cursoId);
+            setCurso(curso);
+        }
+    }
+
+    public Integer getAnioLectivoId() {
+        return anioLectivoId;
+    }
+
+    public void setAnioLectivoId(Integer anioLectivoId) {
+        this.anioLectivoId = anioLectivoId;
+        if (anioLectivoId != null) {
+            Anio_Lectivo anioLectivo = new Anio_Lectivo();
+            anioLectivo.setId(anioLectivoId);
+            setAnioLectivo(anioLectivo);
+        }
+    }
+
+    public Integer getAlumnoId() {
+        return alumnoId;
+    }
+
+    public void setAlumnoId(Integer alumnoId) {
+        this.alumnoId = alumnoId;
+        if (alumnoId != null) {
+            Alumno alumno = new Alumno();
+            alumno.setId(alumnoId);
+            setAlumno(alumno);
+        }
     }
 
     @Override

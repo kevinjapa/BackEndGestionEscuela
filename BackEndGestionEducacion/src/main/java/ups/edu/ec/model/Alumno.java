@@ -25,8 +25,11 @@ public class Alumno {
     private List<Matricula> matriculas;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "representante_id")
+    @JoinColumn(name = "representante_id", nullable = true)
     private Representante representante;
+
+    @Transient
+    private Integer representanteId;
 
     public Alumno() {
     }
@@ -128,6 +131,14 @@ public class Alumno {
 
     public void setRepresentante(Representante representante) {
         this.representante = representante;
+    }
+
+    public Integer getRepresentanteId() {
+        return representanteId;
+    }
+
+    public void setRepresentanteId(Integer representanteId) {
+        this.representanteId = representanteId;
     }
 
     @Override

@@ -15,12 +15,18 @@ public class Detalle_Factura {
     private double iva;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "cabecera_factura_id", nullable = false)
+    @JoinColumn(name = "cabecera_factura_id", nullable = true)
     private Cabecera_Factura cabeceraFactura;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "matricula_id", nullable = false)
+    @JoinColumn(name = "matricula_id", nullable = true)
     private Matricula matricula;
+
+    @Transient
+    private Integer cabeceraFacturaId;
+
+    @Transient
+    private Integer matriculaId;
 
     public Detalle_Factura() {
     }
@@ -98,6 +104,32 @@ public class Detalle_Factura {
 
     public void setMatricula(Matricula matricula) {
         this.matricula = matricula;
+    }
+
+    public Integer getCabeceraFacturaId() {
+        return cabeceraFacturaId;
+    }
+
+    public void setCabeceraFacturaId(Integer cabeceraFacturaId) {
+        this.cabeceraFacturaId = cabeceraFacturaId;
+        if (cabeceraFacturaId != null) {
+            Cabecera_Factura cabeceraFactura = new Cabecera_Factura();
+            cabeceraFactura.setId(cabeceraFacturaId);
+            setCabeceraFactura(cabeceraFactura);
+        }
+    }
+
+    public Integer getMatriculaId() {
+        return matriculaId;
+    }
+
+    public void setMatriculaId(Integer matriculaId) {
+        this.matriculaId = matriculaId;
+        if (matriculaId != null) {
+            Matricula matricula = new Matricula();
+            matricula.setId(matriculaId);
+            setMatricula(matricula);
+        }
     }
 
     @Override

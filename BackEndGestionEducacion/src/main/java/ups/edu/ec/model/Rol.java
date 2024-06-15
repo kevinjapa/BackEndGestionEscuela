@@ -1,5 +1,6 @@
 package ups.edu.ec.model;
 
+import jakarta.json.bind.annotation.JsonbTransient;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -16,7 +17,11 @@ public class Rol {
     private String descripcion;
 
     @OneToMany(mappedBy = "rol", fetch = FetchType.EAGER)
+    @JsonbTransient // Evita la referencia circular durante la serialización
     private List<Usuario> usuarios;
+
+    @Transient
+    private Integer usuarioId;
 
     public Rol() {
     }
@@ -48,6 +53,19 @@ public class Rol {
 
     public void setUsuarios(List<Usuario> usuarios) {
         this.usuarios = usuarios;
+    }
+
+    public Integer getUsuarioId() {
+        return usuarioId;
+    }
+
+    public void setUsuarioId(Integer usuarioId) {
+        this.usuarioId = usuarioId;
+        if (usuarioId != null) {
+            Usuario usuario = new Usuario();
+            usuario.setId(usuarioId);
+            this.usuarios.add(usuario);
+        }
     }
 
     @Override

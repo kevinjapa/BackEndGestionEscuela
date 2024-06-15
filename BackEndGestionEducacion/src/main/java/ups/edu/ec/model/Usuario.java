@@ -22,8 +22,11 @@ public class Usuario {
     private String estado;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "rol_id", nullable = false)
+    @JoinColumn(name = "rol_id", nullable = true)
     private Rol rol;
+
+    @Transient
+    private Integer rolId;
 
     public Usuario() {
     }
@@ -74,6 +77,19 @@ public class Usuario {
 
     public void setRol(Rol rol) {
         this.rol = rol;
+    }
+
+    public Integer getRolId() {
+        return rolId;
+    }
+
+    public void setRolId(Integer rolId) {
+        this.rolId = rolId;
+        if (rolId != null) {
+            Rol rol = new Rol();
+            rol.setId(rolId);
+            setRol(rol);
+        }
     }
 
     @Override
