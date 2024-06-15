@@ -32,7 +32,7 @@ public class DocenteService {
     }
 
     @GET
-    @Path("buscar/{id}")
+    @Path("/buscar/{id}")
     @Produces("application/json")
     public Docente getById(@PathParam("id") int id) throws Exception {
         try {
@@ -47,7 +47,7 @@ public class DocenteService {
     }
 
     @POST
-    @Path("guardar")
+    @Path("/guardar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response save(Docente docente) {
@@ -65,7 +65,7 @@ public class DocenteService {
     }
 
     @PUT
-    @Path("actualizar")
+    @Path("/actualizar")
     @Produces("application/json")
     @Consumes("application/json")
     public Response update(Docente docente) {
@@ -90,7 +90,7 @@ public class DocenteService {
     }
 
     @DELETE
-    @Path("eliminar/{id}")
+    @Path("/eliminar/{id}")
     public Response delete(@PathParam("id") int id) {
         try {
             this.gestionDocente.delete(id);

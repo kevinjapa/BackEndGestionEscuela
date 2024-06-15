@@ -6,20 +6,19 @@ import java.util.List;
 
 @Entity
 public class Representante {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String nombre;
     private String apellido;
     private String cedula;
     private String profesion;
     private String telefono;
-    private String Direccion;
-    @OneToMany(mappedBy = "representante")
-    private List<Alumno> alumnos;
+    private String direccion;
 
-    public Representante(){
-
+    public Representante() {
     }
 
     public Representante(int id, String nombre, String apellido, String cedula, String profesion, String telefono, String direccion) {
@@ -29,7 +28,7 @@ public class Representante {
         this.cedula = cedula;
         this.profesion = profesion;
         this.telefono = telefono;
-        Direccion = direccion;
+        this.direccion = direccion;
     }
 
     public int getId() {
@@ -81,11 +80,11 @@ public class Representante {
     }
 
     public String getDireccion() {
-        return Direccion;
+        return direccion;
     }
 
     public void setDireccion(String direccion) {
-        Direccion = direccion;
+        this.direccion = direccion;
     }
 
     @Override
@@ -97,7 +96,7 @@ public class Representante {
                 ", cedula='" + cedula + '\'' +
                 ", profesion='" + profesion + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", Direccion='" + Direccion + '\'' +
+                ", direccion='" + direccion + '\'' +
                 '}';
     }
 }

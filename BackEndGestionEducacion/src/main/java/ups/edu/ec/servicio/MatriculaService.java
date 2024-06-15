@@ -9,7 +9,7 @@ import ups.edu.ec.utlils.Codigos;
 import ups.edu.ec.utlils.Mensajes;
 
 import java.util.List;
-@Path("/Matricila")
+@Path("/Matricula")
 public class MatriculaService {
     @Inject
     private GestionMatricula gestionMatricula;

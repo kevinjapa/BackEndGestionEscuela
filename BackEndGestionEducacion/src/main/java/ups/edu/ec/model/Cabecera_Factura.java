@@ -10,35 +10,46 @@ public class Cabecera_Factura {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int codigo_Factura;
-    private int id_representante;
-    private int id_alumno;
     private String cedula;
     private String direccion;
     private String telefono;
     private Date fechaEmision;
     private int id_anioLectivo;
+    private Double totalMatricula;
 
-    @OneToMany(mappedBy = "cabeceraFactura")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "alumno_id", nullable = false)
+    private Alumno alumno;
+
+    @OneToMany(mappedBy = "cabeceraFactura", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Detalle_Factura> detalles;
 
-    @ManyToOne
-    @JoinColumn(name = "usuario_id")
-    private Usuario usuario;
+    @Transient
+    private Representante representante;
 
-    public Cabecera_Factura(){
-
+    @PostLoad
+    @PostPersist
+    @PostUpdate
+    private void loadRepresentante() {
+        if (this.alumno != null) {
+            this.representante = this.alumno.getRepresentante();
+        }
     }
 
-    public Cabecera_Factura(int id, int codigo_Factura, int id_representante, int id_alumno, String cedula, String direccion, String telefono, Date fechaEmision, int id_anioLectivo) {
+    public Cabecera_Factura() {
+    }
+
+    public Cabecera_Factura(int id, int codigo_Factura, Alumno alumno, String cedula, String direccion, String telefono, Date fechaEmision, int id_anioLectivo, Double totalMatricula) {
         this.id = id;
         this.codigo_Factura = codigo_Factura;
-        this.id_representante = id_representante;
-        this.id_alumno = id_alumno;
+        this.alumno = alumno;
         this.cedula = cedula;
         this.direccion = direccion;
         this.telefono = telefono;
         this.fechaEmision = fechaEmision;
         this.id_anioLectivo = id_anioLectivo;
+        this.totalMatricula = totalMatricula;
+        loadRepresentante();
     }
 
     public int getId() {
@@ -57,20 +68,13 @@ public class Cabecera_Factura {
         this.codigo_Factura = codigo_Factura;
     }
 
-    public int getId_representante() {
-        return id_representante;
+    public Alumno getAlumno() {
+        return alumno;
     }
 
-    public void setId_representante(int id_representante) {
-        this.id_representante = id_representante;
-    }
-
-    public int getId_alumno() {
-        return id_alumno;
-    }
-
-    public void setId_alumno(int id_alumno) {
-        this.id_alumno = id_alumno;
+    public void setAlumno(Alumno alumno) {
+        this.alumno = alumno;
+        loadRepresentante();
     }
 
     public String getCedula() {
@@ -113,18 +117,40 @@ public class Cabecera_Factura {
         this.id_anioLectivo = id_anioLectivo;
     }
 
+    public Double getTotalMatricula() {
+        return totalMatricula;
+    }
+
+    public void setTotalMatricula(Double totalMatricula) {
+        this.totalMatricula = totalMatricula;
+    }
+
+    public List<Detalle_Factura> getDetalles() {
+        return detalles;
+    }
+
+    public void setDetalles(List<Detalle_Factura> detalles) {
+        this.detalles = detalles;
+    }
+
+    public Representante getRepresentante() {
+        return representante;
+    }
+
     @Override
     public String toString() {
         return "Cabecera_Factura{" +
                 "id=" + id +
                 ", codigo_Factura=" + codigo_Factura +
-                ", id_representante=" + id_representante +
-                ", id_alumno=" + id_alumno +
+                ", alumno=" + alumno +
                 ", cedula='" + cedula + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", fechaEmision=" + fechaEmision +
                 ", id_anioLectivo=" + id_anioLectivo +
+                ", totalMatricula=" + totalMatricula +
+                ", detalles=" + detalles +
+                ", representante=" + representante +
                 '}';
     }
 }

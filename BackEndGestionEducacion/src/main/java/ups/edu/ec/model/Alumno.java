@@ -7,9 +7,11 @@ import java.util.List;
 
 @Entity
 public class Alumno {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String nombre;
     private String apellido;
     private String cedula;
@@ -19,20 +21,15 @@ public class Alumno {
     private Date fecha_N;
     private String direccion;
 
-    @OneToMany(mappedBy = "alumno")
+    @OneToMany(mappedBy = "alumno", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Matricula> matriculas;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "representante_id")
     private Representante representante;
 
-    @ManyToMany
-    @JoinTable(
-            name = "curso_alumno",
-            joinColumns = @JoinColumn(name = "alumno_id"),
-            inverseJoinColumns = @JoinColumn(name = "curso_id")
-    )
-    private List<Curso> cursos;
+    public Alumno() {
+    }
 
     public Alumno(String nombre, String apellido, String cedula, String telefono, String email, String sexo, Date fecha_N, String direccion) {
         this.nombre = nombre;
@@ -43,9 +40,6 @@ public class Alumno {
         this.sexo = sexo;
         this.fecha_N = fecha_N;
         this.direccion = direccion;
-    }
-    public Alumno(){
-
     }
 
     public int getId() {
@@ -120,10 +114,27 @@ public class Alumno {
         this.direccion = direccion;
     }
 
+    public List<Matricula> getMatriculas() {
+        return matriculas;
+    }
+
+    public void setMatriculas(List<Matricula> matriculas) {
+        this.matriculas = matriculas;
+    }
+
+    public Representante getRepresentante() {
+        return representante;
+    }
+
+    public void setRepresentante(Representante representante) {
+        this.representante = representante;
+    }
+
     @Override
     public String toString() {
         return "Alumno{" +
-                "nombre='" + nombre + '\'' +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", cedula='" + cedula + '\'' +
                 ", telefono='" + telefono + '\'' +
@@ -131,6 +142,7 @@ public class Alumno {
                 ", sexo='" + sexo + '\'' +
                 ", fecha_N=" + fecha_N +
                 ", direccion='" + direccion + '\'' +
+                ", representante=" + representante +
                 '}';
     }
 }

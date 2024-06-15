@@ -10,7 +10,6 @@ ups\edu\ec\servicio\RepresentanteService.class
 ups\edu\ec\model\Usuario_.class
 ups\edu\ec\model\Docente.class
 ups\edu\ec\model\Curso_.class
-ups\edu\ec\model\Conexion.class
 ups\edu\ec\negocio\GestioUsusario.class
 ups\edu\ec\servicio\Detalle_FacturaService.class
 ups\edu\ec\daoDatos\RepresentanteDAO.class
@@ -32,7 +31,6 @@ ups\edu\ec\model\Cabecera_Factura_.class
 ups\edu\ec\negocio\GestionDetalle_Factura.class
 ups\edu\ec\model\Cabecera_Factura.class
 ups\edu\ec\servicio\UsuarioService.class
-ups\edu\ec\daoDatos\ConexionDAO.class
 ups\edu\ec\servicio\DocenteService.class
 ups\edu\ec\model\Anio_Lectivo_.class
 ups\edu\ec\daoDatos\CursoDAO.class

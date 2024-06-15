@@ -9,14 +9,16 @@ public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_rol")
     private int id;
+
+    @Column(nullable = false)
     private String descripcion;
 
-    @OneToMany(mappedBy = "rol")
+    @OneToMany(mappedBy = "rol", fetch = FetchType.EAGER)
     private List<Usuario> usuarios;
 
-    public  Rol(){
-
+    public Rol() {
     }
 
     public Rol(int id, String descripcion) {
@@ -38,6 +40,14 @@ public class Rol {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
     }
 
     @Override

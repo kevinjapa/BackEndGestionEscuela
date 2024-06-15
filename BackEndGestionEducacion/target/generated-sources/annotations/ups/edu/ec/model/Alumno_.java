@@ -10,7 +10,6 @@ import javax.annotation.processing.Generated;
 @StaticMetamodel(Alumno.class)
 public abstract class Alumno_ {
 
-	public static volatile ListAttribute<Alumno, Curso> cursos;
 	public static volatile SingularAttribute<Alumno, Date> fecha_N;
 	public static volatile SingularAttribute<Alumno, Representante> representante;
 	public static volatile SingularAttribute<Alumno, String> cedula;
@@ -23,7 +22,6 @@ public abstract class Alumno_ {
 	public static volatile ListAttribute<Alumno, Matricula> matriculas;
 	public static volatile SingularAttribute<Alumno, String> email;
 
-	public static final String CURSOS = "cursos";
 	public static final String FECHA__N = "fecha_N";
 	public static final String REPRESENTANTE = "representante";
 	public static final String CEDULA = "cedula";
