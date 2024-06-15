@@ -1,9 +1,7 @@
 package ups.edu.ec.model;
 
-import jakarta.json.bind.annotation.JsonbDateFormat;
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 @Entity
@@ -17,10 +15,7 @@ public class Cabecera_Factura {
     private String cedula;
     private String direccion;
     private String telefono;
-
-    @JsonbDateFormat("yyyy-MM-dd")
-    private LocalDate fechaEmision;
-
+    private Date fechaEmision;
     private int id_anioLectivo;
 
     @OneToMany(mappedBy = "cabeceraFactura")
@@ -34,7 +29,7 @@ public class Cabecera_Factura {
 
     }
 
-    public Cabecera_Factura(int id, int codigo_Factura, int id_representante, int id_alumno, String cedula, String direccion, String telefono, LocalDate fechaEmision, int id_anioLectivo) {
+    public Cabecera_Factura(int id, int codigo_Factura, int id_representante, int id_alumno, String cedula, String direccion, String telefono, Date fechaEmision, int id_anioLectivo) {
         this.id = id;
         this.codigo_Factura = codigo_Factura;
         this.id_representante = id_representante;
@@ -102,11 +97,11 @@ public class Cabecera_Factura {
         this.telefono = telefono;
     }
 
-    public LocalDate getFechaEmision() {
+    public Date getFechaEmision() {
         return fechaEmision;
     }
 
-    public void setFechaEmision(LocalDate fechaEmision) {
+    public void setFechaEmision(Date fechaEmision) {
         this.fechaEmision = fechaEmision;
     }
 

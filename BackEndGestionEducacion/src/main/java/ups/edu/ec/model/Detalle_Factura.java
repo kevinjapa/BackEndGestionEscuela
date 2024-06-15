@@ -7,26 +7,34 @@ public class Detalle_Factura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int id_cabeceraFactura;
-    private int id_matricula;
+
     private int cantidad;
     private double subtotal;
     private double total;
     private String detalle;
     private double iva;
 
-    @ManyToOne
-    @JoinColumn(name = "cabecera_factura_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "cabecera_factura_id", nullable = true)
     private Cabecera_Factura cabeceraFactura;
 
-    public Detalle_Factura(){
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "matricula_id", nullable = true)
+    private Matricula matricula;
 
+    @Transient
+    private Integer cabeceraFacturaId;
+
+    @Transient
+    private Integer matriculaId;
+
+    public Detalle_Factura() {
     }
 
-    public Detalle_Factura(int id, int id_cabeceraFactura, int id_matricula, int cantidad, double subtotal, double total, String detalle, double iva) {
+    public Detalle_Factura(int id, Cabecera_Factura cabeceraFactura, Matricula matricula, int cantidad, double subtotal, double total, String detalle, double iva) {
         this.id = id;
-        this.id_cabeceraFactura = id_cabeceraFactura;
-        this.id_matricula = id_matricula;
+        this.cabeceraFactura = cabeceraFactura;
+        this.matricula = matricula;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
         this.total = total;
@@ -40,22 +48,6 @@ public class Detalle_Factura {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getId_cabeceraFactura() {
-        return id_cabeceraFactura;
-    }
-
-    public void setId_cabeceraFactura(int id_cabeceraFactura) {
-        this.id_cabeceraFactura = id_cabeceraFactura;
-    }
-
-    public int getId_matricula() {
-        return id_matricula;
-    }
-
-    public void setId_matricula(int id_matricula) {
-        this.id_matricula = id_matricula;
     }
 
     public int getCantidad() {
@@ -98,17 +90,59 @@ public class Detalle_Factura {
         this.iva = iva;
     }
 
+    public Cabecera_Factura getCabeceraFactura() {
+        return cabeceraFactura;
+    }
+
+    public void setCabeceraFactura(Cabecera_Factura cabeceraFactura) {
+        this.cabeceraFactura = cabeceraFactura;
+    }
+
+    public Matricula getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(Matricula matricula) {
+        this.matricula = matricula;
+    }
+
+    public Integer getCabeceraFacturaId() {
+        return cabeceraFacturaId;
+    }
+
+    public void setCabeceraFacturaId(Integer cabeceraFacturaId) {
+        this.cabeceraFacturaId = cabeceraFacturaId;
+        if (cabeceraFacturaId != null) {
+            Cabecera_Factura cabeceraFactura = new Cabecera_Factura();
+            cabeceraFactura.setId(cabeceraFacturaId);
+            setCabeceraFactura(cabeceraFactura);
+        }
+    }
+
+    public Integer getMatriculaId() {
+        return matriculaId;
+    }
+
+    public void setMatriculaId(Integer matriculaId) {
+        this.matriculaId = matriculaId;
+        if (matriculaId != null) {
+            Matricula matricula = new Matricula();
+            matricula.setId(matriculaId);
+            setMatricula(matricula);
+        }
+    }
+
     @Override
     public String toString() {
         return "Detalle_Factura{" +
                 "id=" + id +
-                ", id_cabeceraFactura=" + id_cabeceraFactura +
-                ", id_matricula=" + id_matricula +
                 ", cantidad=" + cantidad +
                 ", subtotal=" + subtotal +
                 ", total=" + total +
                 ", detalle='" + detalle + '\'' +
                 ", iva=" + iva +
+                ", cabeceraFactura=" + cabeceraFactura +
+                ", matricula=" + matricula +
                 '}';
     }
 }

@@ -1,6 +1,5 @@
 package ups.edu.ec.model;
 
-import jakarta.persistence.metamodel.ListAttribute;
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
 import javax.annotation.processing.Generated;
@@ -9,19 +8,17 @@ import javax.annotation.processing.Generated;
 @StaticMetamodel(Representante.class)
 public abstract class Representante_ {
 
-	public static volatile ListAttribute<Representante, Alumno> alumnos;
 	public static volatile SingularAttribute<Representante, String> cedula;
 	public static volatile SingularAttribute<Representante, String> apellido;
-	public static volatile SingularAttribute<Representante, String> Direccion;
+	public static volatile SingularAttribute<Representante, String> direccion;
 	public static volatile SingularAttribute<Representante, Integer> id;
 	public static volatile SingularAttribute<Representante, String> profesion;
 	public static volatile SingularAttribute<Representante, String> telefono;
 	public static volatile SingularAttribute<Representante, String> nombre;
 
-	public static final String ALUMNOS = "alumnos";
 	public static final String CEDULA = "cedula";
 	public static final String APELLIDO = "apellido";
-	public static final String DIRECCION = "Direccion";
+	public static final String DIRECCION = "direccion";
 	public static final String ID = "id";
 	public static final String PROFESION = "profesion";
 	public static final String TELEFONO = "telefono";

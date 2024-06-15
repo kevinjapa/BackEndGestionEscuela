@@ -6,23 +6,40 @@ import java.util.List;
 
 @Entity
 public class Docente {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(nullable = false)
     private String cedula;
+
+    @Column(nullable = false)
     private String nombre;
+
+    @Column(nullable = false)
     private String apellido;
+
+    @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private String telefono;
+
+    @Column(nullable = false)
     private String especialidad;
-    @OneToMany(mappedBy = "docente")
-    private List<Curso> cursos;
 
-    public  Docente(){
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "curso_id", nullable = true)
+    private Curso curso;
 
+    @Transient
+    private Integer cursoId;
+
+    public Docente() {
     }
 
-    public Docente(int id, String cedula, String nombre, String apellido, String email, String telefono, String especialidad) {
+    public Docente(int id, String cedula, String nombre, String apellido, String email, String telefono, String especialidad, Curso curso) {
         this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -30,6 +47,7 @@ public class Docente {
         this.email = email;
         this.telefono = telefono;
         this.especialidad = especialidad;
+        this.curso = curso;
     }
 
     public int getId() {
@@ -88,6 +106,27 @@ public class Docente {
         this.especialidad = especialidad;
     }
 
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public Integer getCursoId() {
+        return cursoId;
+    }
+
+    public void setCursoId(Integer cursoId) {
+        this.cursoId = cursoId;
+        if (cursoId != null) {
+            Curso curso = new Curso();
+            curso.setId(cursoId);
+            setCurso(curso);
+        }
+    }
+
     @Override
     public String toString() {
         return "Docente{" +
@@ -98,6 +137,7 @@ public class Docente {
                 ", email='" + email + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", especialidad='" + especialidad + '\'' +
+                ", curso=" + curso +
                 '}';
     }
 }

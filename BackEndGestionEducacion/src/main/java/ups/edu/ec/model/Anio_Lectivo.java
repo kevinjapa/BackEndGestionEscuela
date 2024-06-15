@@ -5,16 +5,15 @@ import jakarta.persistence.*;
 import java.util.List;
 @Entity
 public class Anio_Lectivo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(nullable = false)
     private String descripcion;
 
-    @OneToMany(mappedBy = "anioLectivo")
-    private List<Curso> cursos;
-
-    public Anio_Lectivo(){
-
+    public Anio_Lectivo() {
     }
 
     public Anio_Lectivo(int id, String descripcion) {
