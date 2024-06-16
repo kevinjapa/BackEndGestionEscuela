@@ -3,8 +3,12 @@ package ups.edu.ec.servicio;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
+import ups.edu.ec.model.Anio_Lectivo;
 import ups.edu.ec.model.Curso;
+import ups.edu.ec.model.Docente;
+import ups.edu.ec.negocio.GestionAnio_lectivo;
 import ups.edu.ec.negocio.GestionCurso;
+import ups.edu.ec.negocio.GestionDocente;
 import ups.edu.ec.utlils.Codigos;
 import ups.edu.ec.utlils.Mensajes;
 
@@ -14,6 +18,12 @@ import java.util.List;
 public class CursoService {
     @Inject
     private GestionCurso gestionCurso;
+
+    @Inject
+    private GestionDocente gestionDocente;
+
+    @Inject
+    private GestionAnio_lectivo gestionAnioLectivo;
 
     @GET
     @Path("/List")
@@ -53,7 +63,7 @@ public class CursoService {
         System.out.println("Servicio POST: " + curso.toString());
         try {
             this.gestionCurso.save(curso);
-            return Response.status(Response.Status.OK).entity(curso).build();
+            return Response.status(Response.Status.CREATED).entity(curso).build();
         } catch (Exception e) {
             System.out.println("Error en servicio POST: " + e.getMessage());
             var error = new Error();

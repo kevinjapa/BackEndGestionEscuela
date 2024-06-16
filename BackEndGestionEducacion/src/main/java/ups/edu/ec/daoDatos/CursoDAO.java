@@ -3,6 +3,7 @@ package ups.edu.ec.daoDatos;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
 import ups.edu.ec.model.Cabecera_Factura;
 import ups.edu.ec.model.Curso;
 
@@ -36,4 +37,5 @@ public class CursoDAO implements Serializable {
     public List<Curso> findAll() {
         return em.createQuery("SELECT c FROM Curso c", Curso.class).getResultList();
     }
+
 }
