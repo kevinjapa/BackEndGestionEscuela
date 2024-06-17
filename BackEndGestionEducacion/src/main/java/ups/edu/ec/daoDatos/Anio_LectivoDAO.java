@@ -1,5 +1,6 @@
 package ups.edu.ec.daoDatos;
 
+import ups.edu.ec.model.Alumno;
 import ups.edu.ec.model.Anio_Lectivo;
 
 import java.io.Serializable;
@@ -38,8 +39,6 @@ public class Anio_LectivoDAO implements Serializable {
     }
 
     public List<Anio_Lectivo> getAll() {
-        String jpql = "SELECT a FROM Anio_Lectivo a";
-        Query q = em.createQuery(jpql);
-        return q.getResultList();
+        return em.createQuery("SELECT a FROM Anio_Lectivo a", Anio_Lectivo.class).getResultList();
     }
 }
