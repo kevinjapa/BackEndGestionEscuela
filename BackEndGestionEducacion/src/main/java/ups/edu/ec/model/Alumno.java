@@ -26,8 +26,8 @@ public class Alumno {
 
     private String direccion;
 
-    @OneToMany(mappedBy = "alumno", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Matricula> matriculas;
+//    @OneToMany(mappedBy = "alumno", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    private List<Matricula> matriculas;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "representante_id", nullable = true)
@@ -122,13 +122,13 @@ public class Alumno {
         this.direccion = direccion;
     }
 
-    public List<Matricula> getMatriculas() {
-        return matriculas;
-    }
-
-    public void setMatriculas(List<Matricula> matriculas) {
-        this.matriculas = matriculas;
-    }
+//    public List<Matricula> getMatriculas() {
+//        return matriculas;
+//    }
+//
+//    public void setMatriculas(List<Matricula> matriculas) {
+//        this.matriculas = matriculas;
+//    }
 
     public Representante getRepresentante() {
         return representante;

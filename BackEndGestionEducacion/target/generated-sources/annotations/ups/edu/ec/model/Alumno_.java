@@ -1,6 +1,5 @@
 package ups.edu.ec.model;
 
-import jakarta.persistence.metamodel.ListAttribute;
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
 import java.time.LocalDate;
@@ -19,7 +18,6 @@ public abstract class Alumno_ {
 	public static volatile SingularAttribute<Alumno, String> telefono;
 	public static volatile SingularAttribute<Alumno, String> sexo;
 	public static volatile SingularAttribute<Alumno, String> nombre;
-	public static volatile ListAttribute<Alumno, Matricula> matriculas;
 	public static volatile SingularAttribute<Alumno, String> email;
 
 	public static final String FECHA__N = "fecha_N";
@@ -31,7 +29,6 @@ public abstract class Alumno_ {
 	public static final String TELEFONO = "telefono";
 	public static final String SEXO = "sexo";
 	public static final String NOMBRE = "nombre";
-	public static final String MATRICULAS = "matriculas";
 	public static final String EMAIL = "email";
 
 }

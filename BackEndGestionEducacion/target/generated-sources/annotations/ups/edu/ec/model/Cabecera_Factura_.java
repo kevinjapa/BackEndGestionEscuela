@@ -12,27 +12,21 @@ public abstract class Cabecera_Factura_ {
 
 	public static volatile SingularAttribute<Cabecera_Factura, Integer> codigo_Factura;
 	public static volatile SingularAttribute<Cabecera_Factura, String> cedula;
-	public static volatile SingularAttribute<Cabecera_Factura, Integer> id_representante;
 	public static volatile SingularAttribute<Cabecera_Factura, String> direccion;
-	public static volatile SingularAttribute<Cabecera_Factura, Integer> id_anioLectivo;
 	public static volatile SingularAttribute<Cabecera_Factura, LocalDate> fechaEmision;
 	public static volatile ListAttribute<Cabecera_Factura, Detalle_Factura> detalles;
 	public static volatile SingularAttribute<Cabecera_Factura, Usuario> usuario;
 	public static volatile SingularAttribute<Cabecera_Factura, Integer> id;
 	public static volatile SingularAttribute<Cabecera_Factura, String> telefono;
-	public static volatile SingularAttribute<Cabecera_Factura, Integer> id_alumno;
 
 	public static final String CODIGO__FACTURA = "codigo_Factura";
 	public static final String CEDULA = "cedula";
-	public static final String ID_REPRESENTANTE = "id_representante";
 	public static final String DIRECCION = "direccion";
-	public static final String ID_ANIO_LECTIVO = "id_anioLectivo";
 	public static final String FECHA_EMISION = "fechaEmision";
 	public static final String DETALLES = "detalles";
 	public static final String USUARIO = "usuario";
 	public static final String ID = "id";
 	public static final String TELEFONO = "telefono";
-	public static final String ID_ALUMNO = "id_alumno";
 
 }
 
