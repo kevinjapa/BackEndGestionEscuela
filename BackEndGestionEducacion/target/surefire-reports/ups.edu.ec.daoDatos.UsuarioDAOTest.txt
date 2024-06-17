@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ups.edu.ec.daoDatos.UsuarioDAOTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.273 s -- in ups.edu.ec.daoDatos.UsuarioDAOTest
