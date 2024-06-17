@@ -1,3 +1,6 @@
+ups/edu/ec/negocio/GestionRolTest.class
+ups/edu/ec/daoDatos/RolDAOTest.class
 ups/edu/ec/model/UsuarioTest.class
 ups/edu/ec/main.class
+ups/edu/ec/model/RolTest.class
 ups/edu/ec/daoDatos/UsuarioDAOTest.class
