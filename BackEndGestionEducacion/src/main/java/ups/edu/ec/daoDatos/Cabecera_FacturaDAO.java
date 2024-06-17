@@ -1,5 +1,6 @@
 package ups.edu.ec.daoDatos;
 
+import ups.edu.ec.model.Anio_Lectivo;
 import ups.edu.ec.model.Cabecera_Factura;
 
 import java.io.Serializable;
@@ -38,8 +39,6 @@ public class Cabecera_FacturaDAO implements Serializable {
     }
 
     public List<Cabecera_Factura> getAll() {
-        String jpql = "SELECT c FROM Cabecera_Factura c";
-        Query q = em.createQuery(jpql);
-        return q.getResultList();
+        return em.createQuery("SELECT c FROM Cabecera_Factura c", Cabecera_Factura.class).getResultList();
     }
 }

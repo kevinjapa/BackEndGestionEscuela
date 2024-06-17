@@ -1,4 +1,5 @@
 ups\edu\ec\model\AlumnoTest.class
+ups\edu\ec\model\Cabecera_FacturaTest.class
 ups\edu\ec\daoDatos\AlumnoDAOTest.class
 ups\edu\ec\negocio\GestionAnio_LectivoTest.class
 ups\edu\ec\main.class
@@ -7,4 +8,6 @@ ups\edu\ec\negocio\GestionAlumnoTest.class
 ups\edu\ec\model\UsuarioTest.class
 ups\edu\ec\negocio\GestioUsuarioTest.class
 ups\edu\ec\model\Anio_LectivoTest.class
+ups\edu\ec\negocio\GestionCabecera_FacturaTest.class
 ups\edu\ec\daoDatos\UsuarioDAOTest.class
+ups\edu\ec\daoDatos\Cabecera_FacturaDAOTest.class
