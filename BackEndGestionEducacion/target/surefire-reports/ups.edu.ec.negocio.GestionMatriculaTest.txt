@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ups.edu.ec.negocio.GestionMatriculaTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.237 s -- in ups.edu.ec.negocio.GestionMatriculaTest
