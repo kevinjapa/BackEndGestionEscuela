@@ -2,8 +2,10 @@ package ups.edu.ec.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-public class Detalle_Factura {
+public class Detalle_Factura implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -15,15 +17,8 @@ public class Detalle_Factura {
     private double iva;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "cabecera_factura_id", nullable = true)
-    private Cabecera_Factura cabeceraFactura;
-
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "matricula_id", nullable = true)
     private Matricula matricula;
-
-    @Transient
-    private Integer cabeceraFacturaId;
 
     @Transient
     private Integer matriculaId;
@@ -31,9 +26,8 @@ public class Detalle_Factura {
     public Detalle_Factura() {
     }
 
-    public Detalle_Factura(int id, Cabecera_Factura cabeceraFactura, Matricula matricula, int cantidad, double subtotal, double total, String detalle, double iva) {
+    public Detalle_Factura(int id, Matricula matricula, int cantidad, double subtotal, double total, String detalle, double iva) {
         this.id = id;
-        this.cabeceraFactura = cabeceraFactura;
         this.matricula = matricula;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
@@ -42,6 +36,7 @@ public class Detalle_Factura {
         this.iva = iva;
     }
 
+    // Getters y Setters
     public int getId() {
         return id;
     }
@@ -90,33 +85,12 @@ public class Detalle_Factura {
         this.iva = iva;
     }
 
-    public Cabecera_Factura getCabeceraFactura() {
-        return cabeceraFactura;
-    }
-
-    public void setCabeceraFactura(Cabecera_Factura cabeceraFactura) {
-        this.cabeceraFactura = cabeceraFactura;
-    }
-
     public Matricula getMatricula() {
         return matricula;
     }
 
     public void setMatricula(Matricula matricula) {
         this.matricula = matricula;
-    }
-
-    public Integer getCabeceraFacturaId() {
-        return cabeceraFacturaId;
-    }
-
-    public void setCabeceraFacturaId(Integer cabeceraFacturaId) {
-        this.cabeceraFacturaId = cabeceraFacturaId;
-        if (cabeceraFacturaId != null) {
-            Cabecera_Factura cabeceraFactura = new Cabecera_Factura();
-            cabeceraFactura.setId(cabeceraFacturaId);
-            setCabeceraFactura(cabeceraFactura);
-        }
     }
 
     public Integer getMatriculaId() {
@@ -141,7 +115,6 @@ public class Detalle_Factura {
                 ", total=" + total +
                 ", detalle='" + detalle + '\'' +
                 ", iva=" + iva +
-                ", cabeceraFactura=" + cabeceraFactura +
                 ", matricula=" + matricula +
                 '}';
     }

@@ -168,12 +168,15 @@ import java.util.List;
 ////    }
 //}
 
+import java.io.Serializable;
+
+
 @Entity
-public class Cabecera_Factura {
+public class Cabecera_Factura implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int codigo_Factura;
+    private int codigoFactura;
     private String cedula;
     private String direccion;
     private String telefono;
@@ -181,30 +184,34 @@ public class Cabecera_Factura {
     @JsonbDateFormat("yyyy-MM-dd")
     private LocalDate fechaEmision;
 
-    @OneToMany(mappedBy = "cabeceraFactura")
-    private List<Detalle_Factura> detalles;
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "detalle_factura_id", nullable = true)
+    private Detalle_Factura detalleFactura;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_id", nullable = true)
     private Usuario usuario;
 
     @Transient
     private Integer usuarioId;
 
+    @Transient
+    private Integer detalleFacturaId;
+
     public Cabecera_Factura() {}
 
-    public Cabecera_Factura(int id, int codigo_Factura, String cedula, String direccion, String telefono, LocalDate fechaEmision, Integer usuarioId) {
+    public Cabecera_Factura(int id, int codigoFactura, String cedula, String direccion, String telefono, LocalDate fechaEmision, Detalle_Factura detalleFactura, Integer usuarioId) {
         this.id = id;
-        this.codigo_Factura = codigo_Factura;
+        this.codigoFactura = codigoFactura;
         this.cedula = cedula;
         this.direccion = direccion;
         this.telefono = telefono;
         this.fechaEmision = fechaEmision;
+        this.detalleFactura = detalleFactura;
         this.usuarioId = usuarioId;
     }
 
     // Getters y Setters
-
     public int getId() {
         return id;
     }
@@ -213,12 +220,12 @@ public class Cabecera_Factura {
         this.id = id;
     }
 
-    public int getCodigo_Factura() {
-        return codigo_Factura;
+    public int getCodigoFactura() {
+        return codigoFactura;
     }
 
-    public void setCodigo_Factura(int codigo_Factura) {
-        this.codigo_Factura = codigo_Factura;
+    public void setCodigoFactura(int codigoFactura) {
+        this.codigoFactura = codigoFactura;
     }
 
     public String getCedula() {
@@ -253,12 +260,12 @@ public class Cabecera_Factura {
         this.fechaEmision = fechaEmision;
     }
 
-    public List<Detalle_Factura> getDetalles() {
-        return detalles;
+    public Detalle_Factura getDetalleFactura() {
+        return detalleFactura;
     }
 
-    public void setDetalles(List<Detalle_Factura> detalles) {
-        this.detalles = detalles;
+    public void setDetalleFactura(Detalle_Factura detalleFactura) {
+        this.detalleFactura = detalleFactura;
     }
 
     public Usuario getUsuario() {
@@ -282,17 +289,31 @@ public class Cabecera_Factura {
         }
     }
 
+    public Integer getDetalleFacturaId() {
+        return detalleFacturaId;
+    }
+
+    public void setDetalleFacturaId(Integer detalleFacturaId) {
+        this.detalleFacturaId = detalleFacturaId;
+        if (detalleFacturaId != null) {
+            Detalle_Factura detalleFactura = new Detalle_Factura();
+            detalleFactura.setId(detalleFacturaId);
+            setDetalleFactura(detalleFactura);
+        }
+    }
+
     @Override
     public String toString() {
         return "Cabecera_Factura{" +
                 "id=" + id +
-                ", codigo_Factura=" + codigo_Factura +
+                ", codigoFactura=" + codigoFactura +
                 ", cedula='" + cedula + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", fechaEmision=" + fechaEmision +
-                ", detalles=" + detalles +
+                ", detalleFactura=" + detalleFactura +
                 ", usuario=" + usuario +
                 '}';
     }
 }
+
