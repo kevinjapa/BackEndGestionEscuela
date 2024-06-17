@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: ups.edu.ec.daoDatos.RolDAOTest
+Test set: ups.edu.ec.model.RepresentanteTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s -- in ups.edu.ec.daoDatos.RolDAOTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in ups.edu.ec.model.RepresentanteTest

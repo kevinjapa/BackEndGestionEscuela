@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ups.edu.ec.daoDatos.RolDAOTest" time="0.072" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ups.edu.ec.negocio.GestionRepresentateTest" time="0.031" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -57,9 +57,22 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="testFindAll" classname="ups.edu.ec.daoDatos.RolDAOTest" time="0.066"/>
-  <testcase name="testRead" classname="ups.edu.ec.daoDatos.RolDAOTest" time="0.001"/>
-  <testcase name="testCreate" classname="ups.edu.ec.daoDatos.RolDAOTest" time="0.001"/>
-  <testcase name="testDelete" classname="ups.edu.ec.daoDatos.RolDAOTest" time="0.001"/>
-  <testcase name="testUpdate" classname="ups.edu.ec.daoDatos.RolDAOTest" time="0.001"/>
+  <testcase name="testSave" classname="ups.edu.ec.negocio.GestionRepresentateTest" time="0.019">
+    <system-out><![CDATA[Se crea un nuevo Representante.
+]]></system-out>
+  </testcase>
+  <testcase name="testFindById" classname="ups.edu.ec.negocio.GestionRepresentateTest" time="0.002">
+    <system-out><![CDATA[Se busca Representante: 1
+]]></system-out>
+  </testcase>
+  <testcase name="testSaveThrowsExceptionOnNull" classname="ups.edu.ec.negocio.GestionRepresentateTest" time="0.001"/>
+  <testcase name="testDelete" classname="ups.edu.ec.negocio.GestionRepresentateTest" time="0.001">
+    <system-out><![CDATA[Se elimina Representante: 1
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAll" classname="ups.edu.ec.negocio.GestionRepresentateTest" time="0.001"/>
+  <testcase name="testUpdate" classname="ups.edu.ec.negocio.GestionRepresentateTest" time="0.002">
+    <system-out><![CDATA[Se actualiza Representante.
+]]></system-out>
+  </testcase>
 </testsuite>
