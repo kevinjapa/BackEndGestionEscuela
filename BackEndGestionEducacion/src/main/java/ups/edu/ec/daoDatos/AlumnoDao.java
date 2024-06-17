@@ -6,6 +6,8 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import ups.edu.ec.model.Alumno;
+import ups.edu.ec.model.Anio_Lectivo;
+import ups.edu.ec.model.Usuario;
 
 
 import java.io.Serializable;
@@ -38,10 +40,7 @@ public class AlumnoDao implements Serializable{
     }
 
     public List<Alumno> getAll() {
-        String jpql = "SELECT a FROM Alumno a";
-        Query q = em.createQuery(jpql);
-        return q.getResultList();
+        return em.createQuery("SELECT a FROM Alumno a", Alumno.class).getResultList();
     }
-
 
 }

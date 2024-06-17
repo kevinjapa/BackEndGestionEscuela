@@ -1,3 +1,7 @@
-ups/edu/ec/model/UsuarioTest.class
-ups/edu/ec/main.class
-ups/edu/ec/daoDatos/UsuarioDAOTest.class
+ups\edu\ec\negocio\GestioUsuarioTest.class
+ups\edu\ec\model\AlumnoTest.class
+ups\edu\ec\daoDatos\AlumnoDAOTest.class
+ups\edu\ec\main.class
+ups\edu\ec\daoDatos\UsuarioDAOTest.class
+ups\edu\ec\negocio\GestionAlumnoTest.class
+ups\edu\ec\model\UsuarioTest.class

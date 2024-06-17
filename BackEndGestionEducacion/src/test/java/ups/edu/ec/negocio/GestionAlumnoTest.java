@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
+import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,16 +14,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import ups.edu.ec.daoDatos.UsuarioDAO;
-import ups.edu.ec.model.Usuario;
+import ups.edu.ec.daoDatos.AlumnoDao;
+import ups.edu.ec.model.Alumno;
 
-public class GestioUsuarioTest {
+public class GestionAlumnoTest {
 
     @Mock
-    private UsuarioDAO usuarioDAO;
+    private AlumnoDao alumnoDAO;
 
     @InjectMocks
-    private GestioUsusario gestioUsuario;
+    private GestionAlumno gestionAlumno;
 
     @BeforeEach
     public void setUp() {
@@ -31,48 +32,48 @@ public class GestioUsuarioTest {
 
     @Test
     public void testSave() throws Exception {
-        Usuario usuario = new Usuario();
-        gestioUsuario.save(usuario);
-        verify(usuarioDAO).create(usuario);
+        Alumno alumno = new Alumno();
+        gestionAlumno.save(alumno);
+        verify(alumnoDAO).create(alumno);
     }
 
     @Test
     public void testGetAll() throws Exception {
-        when(usuarioDAO.findAll()).thenReturn(Collections.singletonList(new Usuario()));
+        when(alumnoDAO.getAll()).thenReturn(Collections.singletonList(new Alumno()));
 
-        List<Usuario> usuarios = gestioUsuario.getAll();
-        assertEquals(1, usuarios.size());
+        List<Alumno> alumnos = gestionAlumno.getAll();
+        assertEquals(1, alumnos.size());
     }
 
     @Test
     public void testUpdate() throws Exception {
-        Usuario usuario = new Usuario();
-        gestioUsuario.update(usuario);
-        verify(usuarioDAO).update(usuario);
+        Alumno alumno = new Alumno();
+        gestionAlumno.update(alumno);
+        verify(alumnoDAO).update(alumno);
     }
 
     @Test
     public void testFindById() throws Exception {
-        Usuario usuario = new Usuario();
-        usuario.setId(1);
-        when(usuarioDAO.read(1)).thenReturn(usuario);
+        Alumno alumno = new Alumno();
+        alumno.setId(1);
+        when(alumnoDAO.getById(1)).thenReturn(alumno);
 
-        Usuario result = gestioUsuario.findById(1);
+        Alumno result = gestionAlumno.findById(1);
         assertEquals(1, result.getId());
     }
 
     @Test
     public void testDelete() throws Exception {
-        gestioUsuario.delete(1);
-        verify(usuarioDAO).delete(1);
+        gestionAlumno.delete(1);
+        verify(alumnoDAO).delete(1);
     }
 
     @Test
     public void testSaveThrowsExceptionOnNull() {
         Exception exception = assertThrows(Exception.class, () -> {
-            gestioUsuario.save(null);
+            gestionAlumno.save(null);
         });
 
-        assertEquals("Usuario vacio !", exception.getMessage());
+        assertEquals("Alumno vacio !", exception.getMessage());
     }
 }
