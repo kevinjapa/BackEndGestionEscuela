@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ups.edu.ec.negocio.GestionRolTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.050 s -- in ups.edu.ec.negocio.GestionRolTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in ups.edu.ec.negocio.GestionRolTest
