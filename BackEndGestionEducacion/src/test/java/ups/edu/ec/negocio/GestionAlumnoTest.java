@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
-import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
@@ -74,6 +73,6 @@ public class GestionAlumnoTest {
             gestionAlumno.save(null);
         });
 
-        assertEquals("Alumno vacio !", exception.getMessage());
+        assertEquals("Alumno vacío!", exception.getMessage());
     }
 }

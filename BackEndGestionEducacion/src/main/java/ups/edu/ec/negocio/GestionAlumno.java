@@ -4,32 +4,60 @@ import java.util.List;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import ups.edu.ec.daoDatos.AlumnoDao;
+import ups.edu.ec.daoDatos.RepresentanteDAO;
 import ups.edu.ec.model.Alumno;
+import ups.edu.ec.model.Representante;
 
 
 @Stateless
 public class GestionAlumno {
 
+//    @Inject
+//    private AlumnoDao alumnoDAO;
+//    public void save(Alumno alumno) throws Exception{
+//        if (alumno == null) {
+//            throw new Exception("Alumno vacio !");
+//
+//        } else {
+//
+//            System.out.println("Se crea un nuevo Alumno.");
+//
+//            try {
+//                this.alumnoDAO.create(alumno);
+//            } catch (Exception e) {
+//                throw new Exception("Error al crear nuevo Alumno: "+e.getMessage());
+//            }
+//        }
+//    }
+@Inject
+private AlumnoDao alumnoDAO;
     @Inject
-    private AlumnoDao alumnoDAO;
+    private RepresentanteDAO representanteDAO;
 
-
-    public void save(Alumno alumno) throws Exception{
+    public void save(Alumno alumno) throws Exception {
         if (alumno == null) {
-            throw new Exception("Alumno vacio !");
-
+            throw new Exception("Alumno vacío!");
         } else {
-
             System.out.println("Se crea un nuevo Alumno.");
-
+            if (alumno.getRepresentanteId() != null) {
+                System.out.println("Buscando representante con ID: " + alumno.getRepresentanteId());
+                Representante representante = representanteDAO.read(alumno.getRepresentanteId());
+                if (representante == null) {
+                    throw new Exception("Representante no encontrado!");
+                }
+                System.out.println("Representante encontrado: " + representante.toString());
+                alumno.setRepresentante(representante);
+            } else {
+                System.out.println("No se proporcionó representante ID.");
+            }
             try {
                 this.alumnoDAO.create(alumno);
             } catch (Exception e) {
-                throw new Exception("Error al crear nuevo Alumno: "+e.getMessage());
+                throw new Exception("Error al crear nuevo Alumno: " + e.getMessage());
             }
         }
-
     }
+
 
     public List<Alumno> getAll()  throws Exception{
 
@@ -41,7 +69,6 @@ public class GestionAlumno {
         }
 
     }
-
     public void update(Alumno alumno) throws Exception{
 
         System.out.println("Se actualiza Alumno.");
@@ -50,12 +77,7 @@ public class GestionAlumno {
         } catch (Exception e) {
             throw new Exception("Error al actualizar Alumno: "+e.getMessage());
         }
-
-
-
     }
-
-
     public Alumno findById(int id) throws Exception{
         System.out.println("Se busca Alumno: "+id);
         try {
@@ -64,7 +86,6 @@ public class GestionAlumno {
             throw new Exception("Error al encontrar Alumno: "+id+", "+e.getMessage());
         }
     }
-
     public void delete(int id) throws Exception{
         System.out.println("Se elimina Alumno: "+id);
         try {
@@ -74,6 +95,4 @@ public class GestionAlumno {
 
         }
     }
-
-
 }

@@ -53,23 +53,45 @@ public class AlumnoService {
         }
     }
 
-    @POST
-    @Path("/guardar")
-    @Produces("application/json")
-    @Consumes("application/json")
-    public Response save(Alumno alumno) {
-        System.out.println("Servicio POST: " + alumno.toString());
-        try {
-            this.gestionAlumno.save(alumno);
-            return Response.status(Response.Status.OK).entity(alumno).build();
-        } catch (Exception e) {
-            System.out.println("Error en servicio POST: " + e.getMessage());
-            var error = new Error();
-            error.setCodigo(Codigos.ERROR_POST_CODE);
-            error.setMensaje(Mensajes.ERROR_POST_MESSAGE + " : " + e.getMessage());
-            return Response.status(Response.Status.BAD_REQUEST).entity(error).build();
+//    @POST
+//    @Path("/guardar")
+//    @Produces("application/json")
+//    @Consumes("application/json")
+//    public Response save(Alumno alumno) {
+//        System.out.println("Servicio POST: " + alumno.toString());
+//        try {
+//            this.gestionAlumno.save(alumno);
+//            return Response.status(Response.Status.OK).entity(alumno).build();
+//        } catch (Exception e) {
+//            System.out.println("Error en servicio POST: " + e.getMessage());
+//            var error = new Error();
+//            error.setCodigo(Codigos.ERROR_POST_CODE);
+//            error.setMensaje(Mensajes.ERROR_POST_MESSAGE + " : " + e.getMessage());
+//            return Response.status(Response.Status.BAD_REQUEST).entity(error).build();
+//        }
+//    }
+@POST
+@Path("/guardar")
+@Produces("application/json")
+@Consumes("application/json")
+public Response save(Alumno alumno) {
+    System.out.println("Servicio POST: " + alumno.toString());
+    try {
+        if (alumno.getRepresentanteId() != null) {
+            System.out.println("Representante ID recibido: " + alumno.getRepresentanteId());
+        } else {
+            System.out.println("No se recibió Representante ID.");
         }
+        this.gestionAlumno.save(alumno);
+        return Response.status(Response.Status.OK).entity(alumno).build();
+    } catch (Exception e) {
+        System.out.println("Error en servicio POST: " + e.getMessage());
+        var error = new Error();
+        error.setCodigo(Codigos.ERROR_POST_CODE);
+        error.setMensaje(Mensajes.ERROR_POST_MESSAGE + " : " + e.getMessage());
+        return Response.status(Response.Status.BAD_REQUEST).entity(error).build();
     }
+}
 
     @PUT
     @Path("/actualizar")

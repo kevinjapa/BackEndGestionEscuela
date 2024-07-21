@@ -26,9 +26,6 @@ public class Alumno {
 
     private String direccion;
 
-//    @OneToMany(mappedBy = "alumno", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-//    private List<Matricula> matriculas;
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "representante_id", nullable = true)
     private Representante representante;
@@ -121,14 +118,6 @@ public class Alumno {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
-//    public List<Matricula> getMatriculas() {
-//        return matriculas;
-//    }
-//
-//    public void setMatriculas(List<Matricula> matriculas) {
-//        this.matriculas = matriculas;
-//    }
 
     public Representante getRepresentante() {
         return representante;
