@@ -29,9 +29,9 @@ public class Docente {
     @Column(nullable = false)
     private String especialidad;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "curso_id", nullable = true)
-    private Curso curso;
+//    @OneToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "curso_id", nullable = true)
+//    private Curso curso;
 
     @Transient
     private Integer cursoId;
@@ -47,7 +47,7 @@ public class Docente {
         this.email = email;
         this.telefono = telefono;
         this.especialidad = especialidad;
-        this.curso = curso;
+//        this.curso = curso;
     }
 
     public int getId() {
@@ -106,26 +106,26 @@ public class Docente {
         this.especialidad = especialidad;
     }
 
-    public Curso getCurso() {
-        return curso;
-    }
+//    public Curso getCurso() {
+//        return curso;
+//    }
 
-    public void setCurso(Curso curso) {
-        this.curso = curso;
-    }
+//    public void setCurso(Curso curso) {
+//        this.curso = curso;
+//    }
 
     public Integer getCursoId() {
         return cursoId;
     }
 
-    public void setCursoId(Integer cursoId) {
-        this.cursoId = cursoId;
-        if (cursoId != null) {
-            Curso curso = new Curso();
-            curso.setId(cursoId);
-            setCurso(curso);
-        }
-    }
+//    public void setCursoId(Integer cursoId) {
+//        this.cursoId = cursoId;
+//        if (cursoId != null) {
+//            Curso curso = new Curso();
+//            curso.setId(cursoId);
+//            setCurso(curso);
+//        }
+//    }
 
     @Override
     public String toString() {
@@ -137,7 +137,7 @@ public class Docente {
                 ", email='" + email + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", especialidad='" + especialidad + '\'' +
-                ", curso=" + curso +
+//                ", curso=" + curso +
                 '}';
     }
 }

@@ -1,7 +1,31 @@
-C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\src\test\java\ups\edu\ec\daoDatos\UsuarioDAOTest.java
-C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\src\test\java\ups\edu\ec\negocio\GestioUsuarioTest.java
-C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\src\test\java\ups\edu\ec\main.java
-C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\src\test\java\ups\edu\ec\model\UsuarioTest.java
-C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\src\test\java\ups\edu\ec\negocio\GestionAlumnoTest.java
-C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\src\test\java\ups\edu\ec\daoDatos\AlumnoDAOTest.java
-C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\src\test\java\ups\edu\ec\model\AlumnoTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/main.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/RepresentanteTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/MatriculaDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/Anio_LectivoTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/DocenteTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/UsuarioTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/DocenteDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionRepresentateTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/AlumnoTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionCursoTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionDocenteTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionMatriculaTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestioUsuarioTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/RolTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/CursoTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/Detalle_FacturaDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/AlumnoDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/Cabecera_FacturaTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/RepresentanteDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionDetalle_FacturaTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionCabecera_FacturaTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/Cabecera_FacturaDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/RolDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionAnio_LectivoTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/Anio_LectivoDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/CursoDAOTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/Detalle_FacturaTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionAlumnoTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/model/MatriculaTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/negocio/GestionRolTest.java
+/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/src/test/java/ups/edu/ec/daoDatos/UsuarioDAOTest.java

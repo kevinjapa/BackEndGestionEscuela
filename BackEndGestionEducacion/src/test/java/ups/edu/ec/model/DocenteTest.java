@@ -19,7 +19,7 @@ public class DocenteTest {
 
         Curso curso = new Curso();
         curso.setId(1);
-        docente.setCurso(curso);
+//        docente.setCurso(curso);
 
         assertEquals(1, docente.getId());
         assertEquals("1234567890", docente.getCedula());
@@ -28,6 +28,6 @@ public class DocenteTest {
         assertEquals("juan.perez@example.com", docente.getEmail());
         assertEquals("0987654321", docente.getTelefono());
         assertEquals("Matemáticas", docente.getEspecialidad());
-        assertEquals(1, docente.getCurso().getId());
+//        assertEquals(1, docente.getCurso().getId());
     }
 }

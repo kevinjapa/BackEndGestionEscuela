@@ -9,7 +9,6 @@ import javax.annotation.processing.Generated;
 public abstract class Docente_ {
 
 	public static volatile SingularAttribute<Docente, String> cedula;
-	public static volatile SingularAttribute<Docente, Curso> curso;
 	public static volatile SingularAttribute<Docente, String> apellido;
 	public static volatile SingularAttribute<Docente, Integer> id;
 	public static volatile SingularAttribute<Docente, String> telefono;
@@ -18,7 +17,6 @@ public abstract class Docente_ {
 	public static volatile SingularAttribute<Docente, String> email;
 
 	public static final String CEDULA = "cedula";
-	public static final String CURSO = "curso";
 	public static final String APELLIDO = "apellido";
 	public static final String ID = "id";
 	public static final String TELEFONO = "telefono";
