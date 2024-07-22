@@ -45,6 +45,22 @@ public class RepresentanteService {
             throw new Exception(error + " : " + e.getMessage());
         }
     }
+
+    @GET
+    @Path("/buscarCedula/{cedula}")
+    @Produces("application/json")
+    public Representante getByCedula(@PathParam("cedula") String cedula) throws Exception {
+        try {
+            return this.gestionRepresentate.findByCedula(cedula);
+        } catch (Exception e) {
+            System.out.println("Error en servicio GET: objeto no encontrado " + e.getMessage());
+            var error = new Error();
+            error.setCodigo(Codigos.ERROR_NOT_FOUND_CODE);
+            error.setMensaje(Mensajes.ERROR_NOT_FOUND_MESSAGE + " : " + e.getMessage());
+            throw new Exception(error + " : " + e.getMessage());
+        }
+    }
+
     @POST
     @Path("/guardar")
     @Produces("application/json")

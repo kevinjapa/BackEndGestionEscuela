@@ -1,77 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.017" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.059" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/test-classes:/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/classes:/Users/kevinjapa/.m2/repository/jakarta/platform/jakarta.jakartaee-api/9.1.0/jakarta.jakartaee-api-9.1.0.jar:/Users/kevinjapa/.m2/repository/org/postgresql/postgresql/42.3.3/postgresql-42.3.3.jar:/Users/kevinjapa/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/kevinjapa/.m2/repository/org/hibernate/orm/hibernate-core/6.1.5.Final/hibernate-core-6.1.5.Final.jar:/Users/kevinjapa/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0.jar:/Users/kevinjapa/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar:/Users/kevinjapa/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/Users/kevinjapa/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.2.Final/hibernate-commons-annotations-6.0.2.Final.jar:/Users/kevinjapa/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/Users/kevinjapa/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/kevinjapa/.m2/repository/net/bytebuddy/byte-buddy/1.12.18/byte-buddy-1.12.18.jar:/Users/kevinjapa/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1.jar:/Users/kevinjapa/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.0/jakarta.inject-api-2.0.0.jar:/Users/kevinjapa/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/kevinjapa/.m2/repository/org/hibernate/orm/hibernate-jpamodelgen/6.1.5.Final/hibernate-jpamodelgen-6.1.5.Final.jar:/Users/kevinjapa/.m2/repository/org/glassfish/jaxb/jaxb-runtime/3.0.1/jaxb-runtime-3.0.1.jar:/Users/kevinjapa/.m2/repository/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1.jar:/Users/kevinjapa/.m2/repository/org/glassfish/jaxb/jaxb-core/3.0.1/jaxb-core-3.0.1.jar:/Users/kevinjapa/.m2/repository/org/glassfish/jaxb/txw2/3.0.1/txw2-3.0.1.jar:/Users/kevinjapa/.m2/repository/com/sun/istack/istack-commons-runtime/4.0.1/istack-commons-runtime-4.0.1.jar:/Users/kevinjapa/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/kevinjapa/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/kevinjapa/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/kevinjapa/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/kevinjapa/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/kevinjapa/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/kevinjapa/.m2/repository/org/mockito/mockito-core/4.0.0/mockito-core-4.0.0.jar:/Users/kevinjapa/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.19/byte-buddy-agent-1.11.19.jar:/Users/kevinjapa/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\target\test-classes;C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\target\classes;C:\Users\pedro\.m2\repository\jakarta\platform\jakarta.jakartaee-api\9.1.0\jakarta.jakartaee-api-9.1.0.jar;C:\Users\pedro\.m2\repository\org\postgresql\postgresql\42.3.3\postgresql-42.3.3.jar;C:\Users\pedro\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\pedro\.m2\repository\org\hibernate\orm\hibernate-core\6.1.5.Final\hibernate-core-6.1.5.Final.jar;C:\Users\pedro\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.0.0\jakarta.persistence-api-3.0.0.jar;C:\Users\pedro\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.0\jakarta.transaction-api-2.0.0.jar;C:\Users\pedro\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\pedro\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.2.Final\hibernate-commons-annotations-6.0.2.Final.jar;C:\Users\pedro\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\pedro\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\pedro\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\pedro\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar;C:\Users\pedro\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.0\jakarta.inject-api-2.0.0.jar;C:\Users\pedro\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\pedro\.m2\repository\org\hibernate\orm\hibernate-jpamodelgen\6.1.5.Final\hibernate-jpamodelgen-6.1.5.Final.jar;C:\Users\pedro\.m2\repository\org\glassfish\jaxb\jaxb-runtime\3.0.1\jaxb-runtime-3.0.1.jar;C:\Users\pedro\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar;C:\Users\pedro\.m2\repository\org\glassfish\jaxb\jaxb-core\3.0.1\jaxb-core-3.0.1.jar;C:\Users\pedro\.m2\repository\org\glassfish\jaxb\txw2\3.0.1\txw2-3.0.1.jar;C:\Users\pedro\.m2\repository\com\sun\istack\istack-commons-runtime\4.0.1\istack-commons-runtime-4.0.1.jar;C:\Users\pedro\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\pedro\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\pedro\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\pedro\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\pedro\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\pedro\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\pedro\.m2\repository\org\mockito\mockito-core\4.0.0\mockito-core-4.0.0.jar;C:\Users\pedro\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.19\byte-buddy-agent-1.11.19.jar;C:\Users\pedro\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="os.name" value="Mac OS X"/>
+    <property name="user.timezone" value="America/Guayaquil"/>
+    <property name="os.name" value="Windows 10"/>
     <property name="java.vm.specification.version" value="19"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="419"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/surefire/surefirebooter-20240721164043933_3.jar /Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/surefire 2024-07-21T16-40-43_885-jvmRun1 surefire-20240721164043933_1tmp surefire_0-20240721164043933_2tmp"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.country" value="EC"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\pedro\AppData\Local\Temp\surefire10174469981659270592\surefirebooter-20240722125319794_3.jar C:\Users\pedro\AppData\Local\Temp\surefire10174469981659270592 2024-07-22T12-53-19_605-jvmRun1 surefire-20240722125319794_1tmp surefire_0-20240722125319794_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/test-classes:/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/classes:/Users/kevinjapa/.m2/repository/jakarta/platform/jakarta.jakartaee-api/9.1.0/jakarta.jakartaee-api-9.1.0.jar:/Users/kevinjapa/.m2/repository/org/postgresql/postgresql/42.3.3/postgresql-42.3.3.jar:/Users/kevinjapa/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/kevinjapa/.m2/repository/org/hibernate/orm/hibernate-core/6.1.5.Final/hibernate-core-6.1.5.Final.jar:/Users/kevinjapa/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0.jar:/Users/kevinjapa/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar:/Users/kevinjapa/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/Users/kevinjapa/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.2.Final/hibernate-commons-annotations-6.0.2.Final.jar:/Users/kevinjapa/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/Users/kevinjapa/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/kevinjapa/.m2/repository/net/bytebuddy/byte-buddy/1.12.18/byte-buddy-1.12.18.jar:/Users/kevinjapa/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1.jar:/Users/kevinjapa/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.0/jakarta.inject-api-2.0.0.jar:/Users/kevinjapa/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/kevinjapa/.m2/repository/org/hibernate/orm/hibernate-jpamodelgen/6.1.5.Final/hibernate-jpamodelgen-6.1.5.Final.jar:/Users/kevinjapa/.m2/repository/org/glassfish/jaxb/jaxb-runtime/3.0.1/jaxb-runtime-3.0.1.jar:/Users/kevinjapa/.m2/repository/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1.jar:/Users/kevinjapa/.m2/repository/org/glassfish/jaxb/jaxb-core/3.0.1/jaxb-core-3.0.1.jar:/Users/kevinjapa/.m2/repository/org/glassfish/jaxb/txw2/3.0.1/txw2-3.0.1.jar:/Users/kevinjapa/.m2/repository/com/sun/istack/istack-commons-runtime/4.0.1/istack-commons-runtime-4.0.1.jar:/Users/kevinjapa/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/kevinjapa/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/kevinjapa/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/kevinjapa/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/kevinjapa/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/kevinjapa/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/kevinjapa/.m2/repository/org/mockito/mockito-core/4.0.0/mockito-core-4.0.0.jar:/Users/kevinjapa/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.19/byte-buddy-agent-1.11.19.jar:/Users/kevinjapa/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="surefire.test.class.path" value="C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\target\test-classes;C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion\target\classes;C:\Users\pedro\.m2\repository\jakarta\platform\jakarta.jakartaee-api\9.1.0\jakarta.jakartaee-api-9.1.0.jar;C:\Users\pedro\.m2\repository\org\postgresql\postgresql\42.3.3\postgresql-42.3.3.jar;C:\Users\pedro\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\pedro\.m2\repository\org\hibernate\orm\hibernate-core\6.1.5.Final\hibernate-core-6.1.5.Final.jar;C:\Users\pedro\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.0.0\jakarta.persistence-api-3.0.0.jar;C:\Users\pedro\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.0\jakarta.transaction-api-2.0.0.jar;C:\Users\pedro\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\pedro\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.2.Final\hibernate-commons-annotations-6.0.2.Final.jar;C:\Users\pedro\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\pedro\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\pedro\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\pedro\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.1\jakarta.xml.bind-api-3.0.1.jar;C:\Users\pedro\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.0\jakarta.inject-api-2.0.0.jar;C:\Users\pedro\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\pedro\.m2\repository\org\hibernate\orm\hibernate-jpamodelgen\6.1.5.Final\hibernate-jpamodelgen-6.1.5.Final.jar;C:\Users\pedro\.m2\repository\org\glassfish\jaxb\jaxb-runtime\3.0.1\jaxb-runtime-3.0.1.jar;C:\Users\pedro\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar;C:\Users\pedro\.m2\repository\org\glassfish\jaxb\jaxb-core\3.0.1\jaxb-core-3.0.1.jar;C:\Users\pedro\.m2\repository\org\glassfish\jaxb\txw2\3.0.1\txw2-3.0.1.jar;C:\Users\pedro\.m2\repository\com\sun\istack\istack-commons-runtime\4.0.1\istack-commons-runtime-4.0.1.jar;C:\Users\pedro\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\pedro\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\pedro\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\pedro\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\pedro\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\pedro\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\pedro\.m2\repository\org\mockito\mockito-core\4.0.0\mockito-core-4.0.0.jar;C:\Users\pedro\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.19\byte-buddy-agent-1.11.19.jar;C:\Users\pedro\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/Users/kevinjapa"/>
+    <property name="user.home" value="C:\Users\pedro"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2022-10-18"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home"/>
-    <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion/target/surefire/surefirebooter-20240721164043933_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\pedro\AppData\Local\Temp\surefire10174469981659270592\surefirebooter-20240722125319794_3.jar"/>
+    <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.runtime.version" value="19.0.1+10-21"/>
-    <property name="user.name" value="kevinjapa"/>
-    <property name="stdout.encoding" value="US-ASCII"/>
-    <property name="path.separator" value=":"/>
-    <property name="os.version" value="14.5"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="pedro"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="/Users/kevinjapa/.m2/repository"/>
+    <property name="localRepository" value="C:\Users\pedro\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="/var/folders/3z/x0r1p0bd2f7b2ysdskjmx4yc0000gn/T/"/>
-    <property name="java.version" value="19.0.1"/>
-    <property name="user.dir" value="/Users/kevinjapa/Documents/ing de sofware/Poroyecto/BackEndGestionEducacion"/>
-    <property name="os.arch" value="aarch64"/>
+    <property name="java.io.tmpdir" value="C:\Users\pedro\AppData\Local\Temp\"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="C:\Users\pedro\Documents\GitHub\BackEndGestionEscuela\BackEndGestionEducacion"/>
+    <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="native.encoding" value="US-ASCII"/>
-    <property name="java.library.path" value="/Users/kevinjapa/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\libnvvp;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Programas\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\mingw64\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.1.1\;C:\Users\pedro\apache-maven-3.9.7\bin;C:\Program Files\Java\jdk-19\bin;C:\Program Files\PostgreSQL\16\bin;C:\ffmpeg\bin;C:\Program Files\nodejs\;C:\Program Files\Git LFS;C:\Users\pedro\miniconda3;C:\Users\pedro\miniconda3\Library\mingw-w64\bin;C:\Users\pedro\miniconda3\Library\usr\bin;C:\Users\pedro\miniconda3\Library\bin;C:\Users\pedro\miniconda3\Scripts;C:\Users\pedro\AppData\Local\Microsoft\WindowsApps;C:\Users\pedro\AppData\Local\GitHubDesktop\bin;D:\Programas\Microsoft VS Code\bin;C:\Users\pedro\AppData\Roaming\npm;C:\Users\pedro\AppData\Local\Programs\Ollama;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="US-ASCII"/>
+    <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="19.0.1+10-21"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="testSave" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.01">
+  <testcase name="testSave" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.038">
     <system-out><![CDATA[Se crea un nueva Cabecera Factura.
 ]]></system-out>
   </testcase>
-  <testcase name="testFindById" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.001">
+  <testcase name="testFindById" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.002">
     <system-out><![CDATA[Se busca Cabecera Factura: 1
 ]]></system-out>
   </testcase>
-  <testcase name="testSaveThrowsExceptionOnNull" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.001"/>
-  <testcase name="testDelete" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.001">
+  <testcase name="testSaveThrowsExceptionOnNull" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.002"/>
+  <testcase name="testDelete" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.006">
     <system-out><![CDATA[Se elimina Cabecera Factura: 1
 ]]></system-out>
   </testcase>
-  <testcase name="testGetAll" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.0"/>
-  <testcase name="testUpdate" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.001">
+  <testcase name="testGetAll" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.002"/>
+  <testcase name="testUpdate" classname="ups.edu.ec.negocio.GestionCabecera_FacturaTest" time="0.002">
     <system-out><![CDATA[Se actualiza Cabecera Factura.
 ]]></system-out>
   </testcase>

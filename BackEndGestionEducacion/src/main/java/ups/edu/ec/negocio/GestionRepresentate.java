@@ -56,4 +56,16 @@ public class GestionRepresentate {
             throw new Exception("Error al eliminar Representante: "+id+", "+e.getMessage());
         }
     }
+
+    public Representante findByCedula(String cedula) throws Exception {
+        System.out.println("Se busca Representante por cédula: " + cedula);
+        try {
+            return this.representanteDAO.findByCedula(cedula);
+        } catch (Exception e) {
+            throw new Exception("Error al encontrar Representante por cédula: " + cedula + ", " + e.getMessage());
+        }
+    }
+
+
+
 }
