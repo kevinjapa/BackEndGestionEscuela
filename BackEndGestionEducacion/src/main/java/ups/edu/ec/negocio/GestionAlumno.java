@@ -12,23 +12,6 @@ import ups.edu.ec.model.Representante;
 @Stateless
 public class GestionAlumno {
 
-//    @Inject
-//    private AlumnoDao alumnoDAO;
-//    public void save(Alumno alumno) throws Exception{
-//        if (alumno == null) {
-//            throw new Exception("Alumno vacio !");
-//
-//        } else {
-//
-//            System.out.println("Se crea un nuevo Alumno.");
-//
-//            try {
-//                this.alumnoDAO.create(alumno);
-//            } catch (Exception e) {
-//                throw new Exception("Error al crear nuevo Alumno: "+e.getMessage());
-//            }
-//        }
-//    }
 @Inject
 private AlumnoDao alumnoDAO;
     @Inject
@@ -93,6 +76,15 @@ private AlumnoDao alumnoDAO;
         } catch (Exception e) {
             throw new Exception("Error al eliminar Alumno: "+id+", "+e.getMessage());
 
+        }
+    }
+
+    public Alumno findByCedula(String cedula) throws Exception {
+        System.out.println("Se busca Alumno por cédula: " + cedula);
+        try {
+            return this.alumnoDAO.findByCedula(cedula);
+        } catch (Exception e) {
+            throw new Exception("Error al encontrar Alumno por cédula: " + cedula + ", " + e.getMessage());
         }
     }
 }

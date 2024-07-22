@@ -5,8 +5,10 @@ import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
+import jakarta.persistence.TypedQuery;
 import ups.edu.ec.model.Alumno;
 import ups.edu.ec.model.Anio_Lectivo;
+import ups.edu.ec.model.Representante;
 import ups.edu.ec.model.Usuario;
 
 
@@ -41,6 +43,13 @@ public class AlumnoDao implements Serializable{
 
     public List<Alumno> getAll() {
         return em.createQuery("SELECT a FROM Alumno a", Alumno.class).getResultList();
+    }
+
+    public Alumno findByCedula(String cedula) {
+        TypedQuery<Alumno> query = em.createQuery("SELECT a FROM Alumno a WHERE a.cedula = :cedula", Alumno.class);
+        query.setParameter("cedula", cedula);
+        List<Alumno> results = query.getResultList();
+        return results.isEmpty() ? null : results.get(0);
     }
 
 }

@@ -12,6 +12,7 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Response;
 import ups.edu.ec.model.Alumno;
+import ups.edu.ec.model.Representante;
 import ups.edu.ec.negocio.GestionAlumno;
 import ups.edu.ec.utlils.Codigos;
 import ups.edu.ec.utlils.Mensajes;
@@ -53,23 +54,6 @@ public class AlumnoService {
         }
     }
 
-//    @POST
-//    @Path("/guardar")
-//    @Produces("application/json")
-//    @Consumes("application/json")
-//    public Response save(Alumno alumno) {
-//        System.out.println("Servicio POST: " + alumno.toString());
-//        try {
-//            this.gestionAlumno.save(alumno);
-//            return Response.status(Response.Status.OK).entity(alumno).build();
-//        } catch (Exception e) {
-//            System.out.println("Error en servicio POST: " + e.getMessage());
-//            var error = new Error();
-//            error.setCodigo(Codigos.ERROR_POST_CODE);
-//            error.setMensaje(Mensajes.ERROR_POST_MESSAGE + " : " + e.getMessage());
-//            return Response.status(Response.Status.BAD_REQUEST).entity(error).build();
-//        }
-//    }
 @POST
 @Path("/guardar")
 @Produces("application/json")
@@ -130,6 +114,21 @@ public Response save(Alumno alumno) {
             error.setCodigo(Codigos.ERROR_DELETE_CODE);
             error.setMensaje(Mensajes.ERROR_DELETE_MESSAGE + " : " + e.getMessage());
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(error).build();
+        }
+    }
+
+    @GET
+    @Path("/buscarCedula/{cedula}")
+    @Produces("application/json")
+    public Alumno getByCedula(@PathParam("cedula") String cedula) throws Exception {
+        try {
+            return this.gestionAlumno.findByCedula(cedula);
+        } catch (Exception e) {
+            System.out.println("Error en servicio GET: objeto no encontrado " + e.getMessage());
+            var error = new Error();
+            error.setCodigo(Codigos.ERROR_NOT_FOUND_CODE);
+            error.setMensaje(Mensajes.ERROR_NOT_FOUND_MESSAGE + " : " + e.getMessage());
+            throw new Exception(error + " : " + e.getMessage());
         }
     }
 }
