@@ -6,10 +6,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
-import ups.edu.ec.model.Alumno;
-import ups.edu.ec.model.Anio_Lectivo;
-import ups.edu.ec.model.Representante;
-import ups.edu.ec.model.Usuario;
+import ups.edu.ec.model.*;
 
 
 import java.io.Serializable;
@@ -49,6 +46,13 @@ public class AlumnoDao implements Serializable{
         TypedQuery<Alumno> query = em.createQuery("SELECT a FROM Alumno a WHERE a.cedula = :cedula", Alumno.class);
         query.setParameter("cedula", cedula);
         List<Alumno> results = query.getResultList();
+        return results.isEmpty() ? null : results.get(0);
+    }
+
+    public Matricula findMatriculaByAlumnoId(int alumnoId) {
+        TypedQuery<Matricula> query = em.createQuery("SELECT m FROM Matricula m WHERE m.alumno.id = :alumnoId", Matricula.class);
+        query.setParameter("alumnoId", alumnoId);
+        List<Matricula> results = query.getResultList();
         return results.isEmpty() ? null : results.get(0);
     }
 

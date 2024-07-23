@@ -6,6 +6,7 @@ import jakarta.inject.Inject;
 import ups.edu.ec.daoDatos.AlumnoDao;
 import ups.edu.ec.daoDatos.RepresentanteDAO;
 import ups.edu.ec.model.Alumno;
+import ups.edu.ec.model.Matricula;
 import ups.edu.ec.model.Representante;
 
 
@@ -85,6 +86,14 @@ private AlumnoDao alumnoDAO;
             return this.alumnoDAO.findByCedula(cedula);
         } catch (Exception e) {
             throw new Exception("Error al encontrar Alumno por cédula: " + cedula + ", " + e.getMessage());
+        }
+    }
+
+    public Matricula getMatriculaByAlumnoId(int alumnoId) throws Exception {
+        try {
+            return alumnoDAO.findMatriculaByAlumnoId(alumnoId);
+        } catch (Exception e) {
+            throw new Exception("Error al obtener matrículas por alumno: " + alumnoId + ", " + e.getMessage());
         }
     }
 }

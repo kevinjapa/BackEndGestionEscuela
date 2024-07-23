@@ -12,6 +12,7 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Response;
 import ups.edu.ec.model.Alumno;
+import ups.edu.ec.model.Matricula;
 import ups.edu.ec.model.Representante;
 import ups.edu.ec.negocio.GestionAlumno;
 import ups.edu.ec.utlils.Codigos;
@@ -129,6 +130,18 @@ public Response save(Alumno alumno) {
             error.setCodigo(Codigos.ERROR_NOT_FOUND_CODE);
             error.setMensaje(Mensajes.ERROR_NOT_FOUND_MESSAGE + " : " + e.getMessage());
             throw new Exception(error + " : " + e.getMessage());
+        }
+    }
+
+    @GET
+    @Path("/matricula/{alumnoId}")
+    @Produces("application/json")
+    public Response getMatriculaByAlumnoId(@PathParam("alumnoId") int alumnoId) {
+        try {
+            Matricula matricula = gestionAlumno.getMatriculaByAlumnoId(alumnoId);
+            return Response.ok(matricula).build();
+        } catch (Exception e) {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Error al obtener matrícula por alumno").build();
         }
     }
 }
